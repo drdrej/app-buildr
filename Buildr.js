@@ -86,6 +86,8 @@ function Buildr(rootDir, modelProjectDir) {
 	
 	this.model = new Model( rootDir, modelFile);
 	
+	this.model.appDefinition.projectTemplate = modelProjectDir;
+	
 	this.logAppHeader();
 };
 
@@ -174,7 +176,7 @@ Buildr.prototype.cleanUp = function() {
  * use transformation declared in a module
  */
 Buildr.prototype.use = function( transformrName ) {
-	var transformrsPath = this.model.appDefinition.app.projectTemplate;
+	var transformrsPath = this.model.appDefinition.projectTemplate;
 	var transformrPath = transformrsPath + "/architecture/buildr/transformrs/" + transformrName + ".js";
 	
 	var transformr = null;

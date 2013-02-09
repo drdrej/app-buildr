@@ -1,0 +1,8 @@
+{
+    "modelVersion": 1,
+    "classDesc": [ {
+          "pckg": "com.example",
+          "msg": "Hello world!",
+          "name": "MyClass"
+    }]
+}
