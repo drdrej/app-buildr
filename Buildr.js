@@ -62,6 +62,55 @@ function Model(wsPath, model) {
 
 	this.rootDir = wsPath;
 	this.workspaceDir = this.rootDir + "/" + this.vfs.nodeId;
+	
+	this.modelSize = 0;
+	this.parentsAppended = 0;
+	
+//	this.appendParent(this.appDefinition );
+//	
+//	console.log( "-- app-model has " + this.modelSize + " entries." );
+//	console.log( "-- buildr has " + this.parentsAppended + " parents appendend" );
+	
+};
+
+
+Model.prototype.appendParent = function( parent ) {
+	if( !parent ) {
+		var msg = "couldn't append parent, because a passed parent is undefined.";
+		console.log( msg );
+		throw new Error( msg );
+	}
+	
+	this.modelSize = this.modelSize + 1;
+	var isParentObject = typeof(parent) === "object";
+	if( !isParentObject ) {
+		console.log( "-- skip! parent is not an object. " + (typeof parent));
+		return;
+	}
+	
+	for( idx in parent ) {
+		var current = parent[idx];
+		var isCurrentObject = (typeof(current) === "object" );
+		
+		if( !current ) {
+			console.log( "-- skip! property parent." + idx + " is undefined" );
+			continue;
+		}
+		
+		if( typeof current.backRef === "function" ) {
+			console.log( "-- skip! property parent.[ " + idx +" ] has parrent." );
+			return;
+		}
+		
+		if( isCurrentObject ) {
+			current.backRef = function() {
+				return parent;
+			};
+			this.parentsAppended = this.parentsAppended + 1;
+		}
+		
+		this.appendParent( current );
+	}
 };
 
 /**

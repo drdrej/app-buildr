@@ -256,6 +256,8 @@ Node.prototype.copyDir = function( toPath ) {
  *            absolute path
  */
 Node.prototype.createDir = function(path) {
+	console.log( "-- path :::: " + path );
+	
 	var result = false;
 	try {
 		result = fs.mkdirSync(path);
