@@ -6,7 +6,7 @@ console.log( "-- buildr loaded: " + Buildr );
 var buildr = new Buildr(BUILDR_PATH + "/example/gen", 
 		BUILDR_PATH + "/example" );
 
-buildr.cleanUp();
+buildr.deleteProject();
 
 buildr.use( "create-helloworld-java" );
 

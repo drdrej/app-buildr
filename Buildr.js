@@ -208,16 +208,40 @@ Buildr.prototype.generate = function() {
 /**
  * delete all files in workspace
  */
-Buildr.prototype.cleanUp = function() {
-	console.log("-- clean up project." );
+Buildr.prototype.deleteProject = function() {
+	console.log("-- delete project." );
 	console.log("-- project-dir = " + this.model.workspaceDir );
 	
 	wrench.rmdirSyncRecursive( this.model.workspaceDir, function(error, curFiles) {
 	    if( error ) {
-			console.log( "-- couldn't del dir. skip it. dir = " + curFiles + " with error: %j " + error );
+			console.log( "-- [WARN] couldn't del dir. skip it. dir = " + curFiles + " with error: %j " + error );
 			return;
 		}
 	});
+};
+
+/**
+ * delete all files in workspace
+ */
+Buildr.prototype.cleanup = function() {
+	console.log("-- clean up project." );
+	console.log("-- project-dir = " + this.model.workspaceDir );
+	
+	var cleanups = this.model.appDefinition.cleanup;
+	
+	for( idx in cleanups ) {
+		var cleanup = cleanups[idx];
+		var dir = this.model.workspaceDir + "/" + cleanup;
+		
+		console.log( "-- cleanup dir: " + dir );
+		wrench.rmdirSyncRecursive( dir, function(error, curFiles) {
+		    if( error ) {
+				console.log( "-- [WARN] couldn't del dir. skip it. dir = " + curFiles + " with error: %j " + error );
+				return;
+			}
+		});		
+	}
+
 };
 
 
