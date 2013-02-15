@@ -1,0 +1,42 @@
+{
+
+  "name": "app-buildr",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  
+  "author": "Andreas Siebert <ask@touchableheroes.com>",
+  
+  "description": "a simple zero-configuration command-line http server",
+  
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drdrej/app-buildr.git"
+  },
+  
+  "keywords": [
+    "code",
+    "transform",
+    "generator",
+    "build",
+    "generate"
+  ],
+ 
+  "dependencies" : {
+    "colors"     :  "*",
+    "JSONSelect" :  "*",
+    "mu2"        :  "*",
+    "underscore" :  "*",
+    "wrench"     :  "*",
+    "xml2js"     :  "*"
+  },
+  
+  "analyze": false,
+ 
+    
+  "license": "MIT",
+  
+  "engines": {
+    "node": ">=0.8.19"
+  }
+}
