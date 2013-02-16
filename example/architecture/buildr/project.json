@@ -1,0 +1,23 @@
+{
+   "buildr" : {
+		"on" : {   
+            "init" : [
+               "create-android-project",
+               "create-icon-launcher",
+               
+               "create-activities",
+               "create-resources",
+               "copy-predefined-layouts",
+               "create-db-entities",
+               "create-db-handler",
+               "create-labels-xml"   
+             ],
+            
+            "java" : [
+               "create-activities",
+               "create-db-entities",
+               "create-db-handler"
+            ]
+        }
+   }
+}
