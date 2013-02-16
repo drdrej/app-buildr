@@ -13,24 +13,24 @@
 10 silly lockFile 3a52ce78- .
 11 verbose lock . C:\Users\asiebert\AppData\Roaming\npm-cache\3a52ce78-.lock
 12 verbose read json package.json
-13 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-6788\\1361045917810-0.17336119059473276\\tmp.tgz',
+13 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-4376\\1361046351358-0.05221200245432556\\tmp.tgz',
 13 verbose tar pack   '.' ]
-14 verbose tarball C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
+14 verbose tarball C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
 15 verbose folder .
 16 info prepublish appbuildr@0.1.0
 17 silly lockFile 3a52ce78- .
 18 verbose lock . C:\Users\asiebert\AppData\Roaming\npm-cache\3a52ce78-.lock
-19 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-20 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\256cc4a1-7810-0-17336119059473276-tmp-tgz.lock
+19 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+20 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\7a8d7cca-1358-0-05221200245432556-tmp-tgz.lock
 21 silly lockFile 3a52ce78- .
 22 silly lockFile 3a52ce78- .
-23 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-24 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-25 verbose tar unpack C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-26 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-27 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package C:\Users\asiebert\AppData\Roaming\npm-cache\409bda81-7810-0-17336119059473276-package.lock
-28 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-29 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\256cc4a1-7810-0-17336119059473276-tmp-tgz.lock
+23 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+24 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+25 verbose tar unpack C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+26 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+27 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package C:\Users\asiebert\AppData\Roaming\npm-cache\2bda1011-1358-0-05221200245432556-package.lock
+28 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+29 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\7a8d7cca-1358-0-05221200245432556-tmp-tgz.lock
 30 silly gunzTarPerm modes [ '755', '644' ]
 31 silly gunzTarPerm extractEntry package.json
 32 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
@@ -62,143 +62,147 @@
 54 silly gunzTarPerm modified mode [ 'lib/BuildrResult.js', 438, 420 ]
 55 silly gunzTarPerm extractEntry lib/BuildrTmpl.js
 56 silly gunzTarPerm modified mode [ 'lib/BuildrTmpl.js', 438, 420 ]
-57 verbose read json C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package\package.json
-58 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-59 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-60 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-61 silly lockFile 256cc4a1-7810-0-17336119059473276-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\tmp.tgz
-62 verbose from cache C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package\package.json
-63 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Roaming\\npm-cache\\appbuildr\\0.1.0\\package.tgz',
-63 verbose tar pack   'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-6788\\1361045917810-0.17336119059473276\\package' ]
-64 verbose tarball C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-65 verbose folder C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-66 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-67 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package C:\Users\asiebert\AppData\Roaming\npm-cache\409bda81-7810-0-17336119059473276-package.lock
-68 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-69 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\dc868434-ache-appbuildr-0-1-0-package-tgz.lock
-70 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-71 silly lockFile 409bda81-7810-0-17336119059473276-package C:\Users\asiebert\AppData\Local\Temp\npm-6788\1361045917810-0.17336119059473276\package
-72 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-73 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-74 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-75 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\cc6ce290-pm-cache-appbuildr-0-1-0-package.lock
+57 silly gunzTarPerm extractEntry LICENSE.md
+58 silly gunzTarPerm modified mode [ 'LICENSE.md', 438, 420 ]
+59 verbose read json C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package\package.json
+60 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+61 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+62 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+63 silly lockFile 7a8d7cca-1358-0-05221200245432556-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\tmp.tgz
+64 verbose from cache C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package\package.json
+65 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Roaming\\npm-cache\\appbuildr\\0.1.0\\package.tgz',
+65 verbose tar pack   'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-4376\\1361046351358-0.05221200245432556\\package' ]
+66 verbose tarball C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+67 verbose folder C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+68 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+69 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package C:\Users\asiebert\AppData\Roaming\npm-cache\2bda1011-1358-0-05221200245432556-package.lock
+70 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+71 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\dc868434-ache-appbuildr-0-1-0-package-tgz.lock
+72 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+73 silly lockFile 2bda1011-1358-0-05221200245432556-package C:\Users\asiebert\AppData\Local\Temp\npm-4376\1361046351358-0.05221200245432556\package
+74 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+75 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
 76 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-77 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-78 verbose tar unpack C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+77 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\cc6ce290-pm-cache-appbuildr-0-1-0-package.lock
+78 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
 79 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-80 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\cc6ce290-pm-cache-appbuildr-0-1-0-package.lock
-81 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-82 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\dc868434-ache-appbuildr-0-1-0-package-tgz.lock
-83 silly gunzTarPerm modes [ '755', '644' ]
-84 silly gunzTarPerm extractEntry package.json
-85 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
-86 silly gunzTarPerm extractEntry README.md
-87 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
-88 silly gunzTarPerm extractEntry example/architecture/buildr/project.js
-89 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.js', 438, 420 ]
-90 silly gunzTarPerm extractEntry example/architecture/buildr/app-model.json
-91 silly gunzTarPerm modified mode [ 'example/architecture/buildr/app-model.json', 438, 420 ]
-92 silly gunzTarPerm extractEntry example/architecture/buildr/project.json
-93 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.json', 438, 420 ]
-94 silly gunzTarPerm extractEntry example/architecture/buildr/transformrs/create-helloworld-java.js
-95 silly gunzTarPerm modified mode [ 'example/architecture/buildr/transformrs/create-helloworld-java.js',
-95 silly gunzTarPerm   438,
-95 silly gunzTarPerm   420 ]
-96 silly gunzTarPerm extractEntry example/gen/project-root-ws/com/example/MyClass.java
-97 silly gunzTarPerm modified mode [ 'example/gen/project-root-ws/com/example/MyClass.java',
+80 verbose tar unpack C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+81 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
+82 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package C:\Users\asiebert\AppData\Roaming\npm-cache\cc6ce290-pm-cache-appbuildr-0-1-0-package.lock
+83 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+84 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\dc868434-ache-appbuildr-0-1-0-package-tgz.lock
+85 silly gunzTarPerm modes [ '755', '644' ]
+86 silly gunzTarPerm extractEntry package.json
+87 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+88 silly gunzTarPerm extractEntry README.md
+89 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+90 silly gunzTarPerm extractEntry example/architecture/buildr/project.js
+91 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.js', 438, 420 ]
+92 silly gunzTarPerm extractEntry example/architecture/buildr/app-model.json
+93 silly gunzTarPerm modified mode [ 'example/architecture/buildr/app-model.json', 438, 420 ]
+94 silly gunzTarPerm extractEntry example/architecture/buildr/project.json
+95 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.json', 438, 420 ]
+96 silly gunzTarPerm extractEntry example/architecture/buildr/transformrs/create-helloworld-java.js
+97 silly gunzTarPerm modified mode [ 'example/architecture/buildr/transformrs/create-helloworld-java.js',
 97 silly gunzTarPerm   438,
 97 silly gunzTarPerm   420 ]
-98 silly gunzTarPerm extractEntry example/templates/HelloWorld.java.tmpl
-99 silly gunzTarPerm modified mode [ 'example/templates/HelloWorld.java.tmpl', 438, 420 ]
-100 silly gunzTarPerm extractEntry lib/appbuildr.js
-101 silly gunzTarPerm modified mode [ 'lib/appbuildr.js', 438, 420 ]
-102 silly gunzTarPerm extractEntry lib/Buildr.js
-103 silly gunzTarPerm modified mode [ 'lib/Buildr.js', 438, 420 ]
-104 silly gunzTarPerm extractEntry lib/BuildrAstNode.js
-105 silly gunzTarPerm modified mode [ 'lib/BuildrAstNode.js', 438, 420 ]
-106 silly gunzTarPerm extractEntry lib/BuildrResult.js
-107 silly gunzTarPerm modified mode [ 'lib/BuildrResult.js', 438, 420 ]
-108 silly gunzTarPerm extractEntry lib/BuildrTmpl.js
-109 silly gunzTarPerm modified mode [ 'lib/BuildrTmpl.js', 438, 420 ]
-110 verbose read json C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package\package.json
-111 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-112 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
-113 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-114 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-115 silly shasum updated bytes 6801
-116 info shasum 1e0734cfb2543c01eb4febc36b9406b1e5f26a15
-116 info shasum C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-117 verbose from cache C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package\package.json
-118 verbose chmod C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz 644
-119 silly chown skipping for windows C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
-120 silly lockFile 3a52ce78- .
-121 silly publish { name: 'appbuildr',
-121 silly publish   preferGlobal: true,
-121 silly publish   version: '0.1.0',
-121 silly publish   author: { name: 'Andreas Siebert', email: 'ask@touchableheroes.com' },
-121 silly publish   description: 'a simple code generation tool for developers',
-121 silly publish   repository: { type: 'git', url: 'https://github.com/drdrej/app-buildr.git' },
-121 silly publish   keywords: [ 'code', 'transform', 'generator', 'build', 'generate' ],
-121 silly publish   dependencies:
-121 silly publish    { imagemagick: '*',
-121 silly publish      JSONSelect: '*',
-121 silly publish      mocha: '*',
-121 silly publish      mu2: '*',
-121 silly publish      underscore: '*',
-121 silly publish      wrench: '*',
-121 silly publish      xml2js: '*' },
-121 silly publish   devDependencies:
-121 silly publish    { imagemagick: '*',
-121 silly publish      JSONSelect: '*',
-121 silly publish      mocha: '*',
-121 silly publish      mu2: '*',
-121 silly publish      underscore: '*',
-121 silly publish      wrench: '*',
-121 silly publish      xml2js: '*' },
-121 silly publish   analyze: false,
-121 silly publish   license: 'MIT',
-121 silly publish   engines: { node: '>=0.8.19' },
-121 silly publish   readmeFilename: 'README.md',
-121 silly publish   main: 'lib/appbuildr.js',
-121 silly publish   directories: { example: 'example', test: 'test' },
-121 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
-121 silly publish   readme: 'app-buildr\r\n==========\r\n\r\nAuthor: Andreas Siebert\r\n\r\nDescription:\r\n------------\r\nA code-generator to build apps. App-Buildr use templates and JavaScript to build code for your app. ',
-121 silly publish   _id: 'appbuildr@0.1.0',
-121 silly publish   dist: { shasum: '1e0734cfb2543c01eb4febc36b9406b1e5f26a15' },
-121 silly publish   _from: '.' }
-122 verbose url raw appbuildr
-123 verbose url resolving [ 'https://registry.npmjs.org/', './appbuildr' ]
-124 verbose url resolved https://registry.npmjs.org/appbuildr
-125 info trying registry request attempt 1 at 21:18:49
-126 http PUT https://registry.npmjs.org/appbuildr
-127 http 500 https://registry.npmjs.org/appbuildr
-128 info retry will retry, error on last attempt: Error: case_clause {[]}: appbuildr
-129 info trying registry request attempt 2 at 21:19:00
+98 silly gunzTarPerm extractEntry example/gen/project-root-ws/com/example/MyClass.java
+99 silly gunzTarPerm modified mode [ 'example/gen/project-root-ws/com/example/MyClass.java',
+99 silly gunzTarPerm   438,
+99 silly gunzTarPerm   420 ]
+100 silly gunzTarPerm extractEntry example/templates/HelloWorld.java.tmpl
+101 silly gunzTarPerm modified mode [ 'example/templates/HelloWorld.java.tmpl', 438, 420 ]
+102 silly gunzTarPerm extractEntry lib/appbuildr.js
+103 silly gunzTarPerm modified mode [ 'lib/appbuildr.js', 438, 420 ]
+104 silly gunzTarPerm extractEntry lib/Buildr.js
+105 silly gunzTarPerm modified mode [ 'lib/Buildr.js', 438, 420 ]
+106 silly gunzTarPerm extractEntry lib/BuildrAstNode.js
+107 silly gunzTarPerm modified mode [ 'lib/BuildrAstNode.js', 438, 420 ]
+108 silly gunzTarPerm extractEntry lib/BuildrResult.js
+109 silly gunzTarPerm modified mode [ 'lib/BuildrResult.js', 438, 420 ]
+110 silly gunzTarPerm extractEntry lib/BuildrTmpl.js
+111 silly gunzTarPerm modified mode [ 'lib/BuildrTmpl.js', 438, 420 ]
+112 silly gunzTarPerm extractEntry LICENSE.md
+113 silly gunzTarPerm modified mode [ 'LICENSE.md', 438, 420 ]
+114 verbose read json C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package\package.json
+115 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
+116 silly lockFile cc6ce290-pm-cache-appbuildr-0-1-0-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package
+117 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+118 silly lockFile dc868434-ache-appbuildr-0-1-0-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+119 silly shasum updated bytes 7499
+120 info shasum cb49bb8afb37a3ecbe5ec2c2a530d685d6a0976e
+120 info shasum C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+121 verbose from cache C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package\package.json
+122 verbose chmod C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz 644
+123 silly chown skipping for windows C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.0\package.tgz
+124 silly lockFile 3a52ce78- .
+125 silly publish { name: 'appbuildr',
+125 silly publish   preferGlobal: true,
+125 silly publish   version: '0.1.0',
+125 silly publish   author: { name: 'Andreas Siebert', email: 'ask@touchableheroes.com' },
+125 silly publish   description: 'a simple code generation tool for developers',
+125 silly publish   repository: { type: 'git', url: 'https://github.com/drdrej/app-buildr.git' },
+125 silly publish   keywords: [ 'code', 'transform', 'generator', 'build', 'generate' ],
+125 silly publish   dependencies:
+125 silly publish    { imagemagick: '*',
+125 silly publish      JSONSelect: '*',
+125 silly publish      mocha: '*',
+125 silly publish      mu2: '*',
+125 silly publish      underscore: '*',
+125 silly publish      wrench: '*',
+125 silly publish      xml2js: '*' },
+125 silly publish   devDependencies:
+125 silly publish    { imagemagick: '*',
+125 silly publish      JSONSelect: '*',
+125 silly publish      mocha: '*',
+125 silly publish      mu2: '*',
+125 silly publish      underscore: '*',
+125 silly publish      wrench: '*',
+125 silly publish      xml2js: '*' },
+125 silly publish   analyze: false,
+125 silly publish   license: 'MIT',
+125 silly publish   engines: { node: '>=0.8.19' },
+125 silly publish   readmeFilename: 'README.md',
+125 silly publish   main: 'lib/appbuildr.js',
+125 silly publish   directories: { example: 'example', test: 'test' },
+125 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+125 silly publish   readme: 'app-buildr\r\n==========\r\n\r\nAuthor: Andreas Siebert\r\n\r\nDescription:\r\n------------\r\nA code-generator to build apps. App-Buildr use templates and JavaScript to build code for your app. \r\n\r\n\r\nLicense: MIT\r\n',
+125 silly publish   _id: 'appbuildr@0.1.0',
+125 silly publish   dist: { shasum: 'cb49bb8afb37a3ecbe5ec2c2a530d685d6a0976e' },
+125 silly publish   _from: '.' }
+126 verbose url raw appbuildr
+127 verbose url resolving [ 'https://registry.npmjs.org/', './appbuildr' ]
+128 verbose url resolved https://registry.npmjs.org/appbuildr
+129 info trying registry request attempt 1 at 21:26:02
 130 http PUT https://registry.npmjs.org/appbuildr
 131 http 500 https://registry.npmjs.org/appbuildr
 132 info retry will retry, error on last attempt: Error: case_clause {[]}: appbuildr
-133 info trying registry request attempt 3 at 21:20:02
+133 info trying registry request attempt 2 at 21:26:14
 134 http PUT https://registry.npmjs.org/appbuildr
 135 http 500 https://registry.npmjs.org/appbuildr
-136 error publish Failed PUT response 500
-137 error Error: case_clause {[]}: appbuildr
-137 error     at RegClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:259:14)
-137 error     at Request.init.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:120:22)
-137 error     at Request.EventEmitter.emit (events.js:99:17)
-137 error     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:648:16)
-137 error     at Request.EventEmitter.emit (events.js:126:20)
-137 error     at IncomingMessage.Request.start.self.req.self.httpModule.request.buffer (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:610:14)
-137 error     at IncomingMessage.EventEmitter.emit (events.js:126:20)
-137 error     at IncomingMessage._emitEnd (http.js:366:10)
-137 error     at HTTPParser.parserOnMessageComplete [as onMessageComplete] (http.js:149:23)
-137 error     at CleartextStream.socketOnData [as ondata] (http.js:1447:20)
-138 error If you need help, you may report this log at:
-138 error     <http://github.com/isaacs/npm/issues>
-138 error or email it to:
-138 error     <npm-@googlegroups.com>
-139 error System Windows_NT 6.1.7601
-140 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
-141 error cwd C:\home\projects\android-mrtan\sources\sdk-apklib\app-buildr\script
-142 error node -v v0.8.19
-143 error npm -v 1.2.10
-144 verbose exit [ 1, true ]
+136 info retry will retry, error on last attempt: Error: case_clause {[]}: appbuildr
+137 info trying registry request attempt 3 at 21:27:15
+138 http PUT https://registry.npmjs.org/appbuildr
+139 http 500 https://registry.npmjs.org/appbuildr
+140 error publish Failed PUT response 500
+141 error Error: case_clause {[]}: appbuildr
+141 error     at RegClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:259:14)
+141 error     at Request.init.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:120:22)
+141 error     at Request.EventEmitter.emit (events.js:99:17)
+141 error     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:648:16)
+141 error     at Request.EventEmitter.emit (events.js:126:20)
+141 error     at IncomingMessage.Request.start.self.req.self.httpModule.request.buffer (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:610:14)
+141 error     at IncomingMessage.EventEmitter.emit (events.js:126:20)
+141 error     at IncomingMessage._emitEnd (http.js:366:10)
+141 error     at HTTPParser.parserOnMessageComplete [as onMessageComplete] (http.js:149:23)
+141 error     at CleartextStream.socketOnData [as ondata] (http.js:1447:20)
+142 error If you need help, you may report this log at:
+142 error     <http://github.com/isaacs/npm/issues>
+142 error or email it to:
+142 error     <npm-@googlegroups.com>
+143 error System Windows_NT 6.1.7601
+144 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+145 error cwd C:\home\projects\android-mrtan\sources\sdk-apklib\app-buildr\script
+146 error node -v v0.8.19
+147 error npm -v 1.2.10
+148 verbose exit [ 1, true ]
