@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/drdrej/app-buildr.git"
   },
+  
   "keywords": [
     "code",
     "transform",
@@ -49,7 +50,6 @@
 
   "readmeFilename": "README.md",
 
-  "gitHead": "a9d25ff57853090191b78bb0f7200ca07d0204a9",
 
   "main": "lib/appbuildr.js",
   
