@@ -3,7 +3,7 @@
   "preferGlobal": true,
 
   "version": "0.1.0",
-  "author": "Andreas Siebert <ask@touchableheroes.com>",
+  "author": "drdrej",
 
   "description": "a simple code generation tool for developers",
 
@@ -51,7 +51,7 @@
   "readmeFilename": "README.md",
 
 
-  "main": "lib/appbuildr.js",
+  "main": "appbuildr.js",
   
   "directories": {
     "example": "example",

@@ -18,7 +18,7 @@ if( cliArgs.length == 1 ) {
 
 console.log('use cli-args: ', cliArgs );
 
-var Buildr = require( "./Buildr.js" );
+var Buildr = require(__dirname + "/lib/Buildr.js" );
 
 
 var buildr = new Buildr("C:/home/projects/android-mrtan/sources/android-playground", 
