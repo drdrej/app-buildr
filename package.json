@@ -1,17 +1,13 @@
 {
   "name": "appbuildr",
   "preferGlobal": true,
-
   "version": "0.1.0",
   "author": "drdrej",
-
   "description": "a simple code generation tool for developers",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/drdrej/app-buildr.git"
   },
-  
   "keywords": [
     "code",
     "transform",
@@ -19,45 +15,37 @@
     "build",
     "generate"
   ],
-  
   "dependencies": {
     "imagemagick": "*",
     "JSONSelect": "*",
-    "mocha" : "*",
+    "mocha": "*",
     "mu2": "*",
     "underscore": "*",
     "wrench": "*",
-    "xml2js": "*"
+    "xml2js": "*",
+    "jison": "~0.4.2",
+    "pegjs": "~0.7.0"
   },
-
   "devDependencies": {
     "imagemagick": "*",
     "JSONSelect": "*",
-    "mocha" : "*",
+    "mocha": "*",
     "mu2": "*",
     "underscore": "*",
     "wrench": "*",
     "xml2js": "*"
   },
-  
   "analyze": false,
-
   "license": "MIT",
-
   "engines": {
     "node": ">=0.8.19"
   },
-
   "readmeFilename": "README.md",
-
-
   "main": "appbuildr.js",
-  
   "directories": {
     "example": "example",
     "test": "test"
   },
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
