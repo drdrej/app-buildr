@@ -16,11 +16,18 @@ describe('BuildrMacroParser', function(){
 		// test: replace next word with mustache-command
 		var commandStr = "[#replace with:xyz ]";
 		var result = mp.parse( commandStr );
-		console.log( "-- result: %j" + result );
 		
-		var output = result.output[0];
+		assert.equal( "replace", result.name );
+		assert.equal( "xyz", result.params[ "with" ] );
 		
-		assert.equal( true, output.data);
+//		{
+//			   "name": "rw",
+//			   "params": {
+//			      "dd": "zz",
+//			      "xxx": "andrej",
+//			      "aaa": "xxx"
+//			   }
+//		};
     });
 
 	it('replace command with one option in string-syntax', function() {
@@ -30,11 +37,10 @@ describe('BuildrMacroParser', function(){
 		// test: replace next word with mustache-command
 		var commandStr = '[#replace with:"xyz" ]';
 		var result = mp.parse( commandStr );
-		console.log( "-- result: %j" + result );
 		
-		var output = result.output[0];
+		assert.equal( "replace", result.name );
+		assert.equal( "xyz", result.params[ "with" ] );
 		
-		assert.equal( true, output.data);
     });
 	
   });
