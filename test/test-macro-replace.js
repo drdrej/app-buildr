@@ -20,54 +20,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 IN THE SOFTWARE.
 
- */
+*/
 
-var fs = require('fs');
+var assert = require("assert");
 
-/**
- * Generator-Stream-Wraper
- * -- simple implementation.
- * 
- * @param data
- * @param toFile
- * 
- * @returns
- */
-function MacroGeneratorStream( data, toFile ) {
-	this.toFile = toFile;
-	this.data = data;
-	this.buffer = "";
-	
-//	this.out = fs.createWriteStream(toFile, {
-//		'flags' : 'w',
-//		'encoding' : 'utf-8',
-//		'mode' : 0666
-//	});
-	
-};
+var Replace = require("../lib/macro/replace.js");
 
-/**
- * push content to file
- * 
- * @param start
- * @param end
- */
-MacroGeneratorStream.prototype.push = function(txt) {
-//	var result = this.out.writeFileSync(txt);
-//	console.log("-- pushed: '" + txt + "'. successful: " + result);
-//	this.out.flush();
-//	
-//	return true;
-	
-	this.buffer = this.buffer + txt;
-	console.log("-- pushed: '" + txt + "'. successful.");
-	
-	return true;
-};
+describe('Replace', function() {
 
+	describe('#exec()', function() {
+		it('should replace token with some passed value', function() {
+			var cmd = new Replace( {
+				"token" : "test",
+				"with"  : "unit"
+			});
+			
+			assert.equal( true, (cmd != undefined) );
+		});
+	});
 
-MacroGeneratorStream.prototype.end = function() {
-	fs.writeFileSync(this.toFile, this.buffer);
-};
-
-module.exports = MacroGeneratorStream;
+});
