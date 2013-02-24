@@ -118,4 +118,16 @@ describe('MacroParser', function() {
 
 	});
 
+	
+	describe('#preProcessContent()', function() {
+		it('replace command with one option in mustache-syntax', function() {
+			var path = __dirname + "/out-preprocess.test";
+
+			var result = mp.preProcessContent('public class /*[#replace token : "BasicOpenDBHandler" with:"params.classNAme" #]    BasicOpenDBHandler extends',
+					path);
+			
+			assert.equal(true, result);
+		});
+	});
+	
 });

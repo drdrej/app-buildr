@@ -1,0 +1,1 @@
+public class /*[#replace token : "BasicOpenDBHandler" with:"params.classNAme" #]    params.classNAme extends
