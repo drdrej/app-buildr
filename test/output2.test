@@ -1,1 +1,1 @@
-this is a 
+this is a [#replace token:"test" with:"testcase" #]test#]test.
