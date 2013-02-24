@@ -45,26 +45,6 @@ describe('MacroParser', function() {
 		});
 	});
 
-	describe('#preProcessContent()', function() {
-		it('found command-open-tag', function() {
-			var path = __dirname + "/output.test";
-
-			var result = mp.preProcessContent("dasdasdas[#replace", path);
-
-			assert.equal("end-position is wrong", result.msg);
-		});
-
-		it('found command-open-tag', function() {
-			var path = __dirname + "/output2.test";
-
-			var result = mp.preProcessContent("dasdasdas[#replace #]asd",
-					path);
-			
-			assert.equal(true, result);
-		});
-
-	});
-	
 	describe('#parseCommand() for commands with args', function() {
 
 		it('replace command with one option AND word-syntax', function() {
@@ -118,5 +98,24 @@ describe('MacroParser', function() {
 
 	});
 
+	describe('#preProcessContent()', function() {
+		it('found command-open-tag', function() {
+			var path = __dirname + "/output.test";
+
+			var result = mp.preProcessContent("dasdasdas[#replace", path);
+
+			assert.equal("end-position is wrong", result.msg);
+		});
+
+		it('found command-open-tag', function() {
+			var path = __dirname + "/output2.test";
+
+			var result = mp.preProcessContent('this is a [#replace token:"test" with:"testcase" #]test.',
+					path);
+			
+			assert.equal(true, result);
+		});
+
+	});
 
 });

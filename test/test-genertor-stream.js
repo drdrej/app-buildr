@@ -22,36 +22,22 @@ IN THE SOFTWARE.
 
 */
 
-function UncommentCmd( params ) {
-	this.name = "uncomment";
-	
-	// TODO: move scope-replacer to a config-file for macroparser, 
-    // bound on a special file-type.
-	// where the scope-replacer should start:
-	this.startAfter = "-->";
+var assert = require("assert");
 
-	this.params = {};
-	
-	// predefined für alle commands
-	this.scopeEnd = "//#end";
-};
+var MacroGeneratorStream = require("../lib/MacroGeneratorStream.js");
 
+describe('MacroGeneratorStream', function() {
 
-UncommentCmd.prototype.validate = function() {
-	console.log( "validate command" );
-	
-	return {
-		success: true
-	};
-};
+	describe('#push()', function() {
+		it('should write to file', function() {
+			var file = "./test1.txt";
+			var out = new MacroGeneratorStream( "test data should be written to file", file );
+			var result = out.push( "block1\n" );
+			var result2 = out.push( "block2" );
+			
+			assert.equal( true, result );
+			assert.equal( true, result2 );
+		});
+	});
 
-UncommentCmd.prototype.exec = function( scope ) {
-	console.log( "-- exec replace on scope: " + scope );
-};
-
-
-
-/**
- * exports
- */
-module.exports = UncommentCmd;
+});
