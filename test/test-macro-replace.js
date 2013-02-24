@@ -36,6 +36,9 @@ describe('Replace', function() {
 			});
 			
 			assert.equal( true, (cmd != undefined) );
+			
+			var compiled = cmd.exec( "this is a test-case." );
+			assert.equal("this is a unit-case.", compiled);
 		});
 	});
 
