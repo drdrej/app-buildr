@@ -1,7 +1,9 @@
 {
   "name": "appbuildr",
+  
   "preferGlobal": true,
-  "version": "0.1.1",
+  "version": "0.1.3",
+  
   "author": "drdrej",
   "description": "a simple code generation tool for developers",
   "repository": {
