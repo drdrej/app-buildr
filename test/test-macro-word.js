@@ -29,7 +29,7 @@ var Replace = require("../lib/macro/word.js");
 describe('Word', function() {
 
 	describe('#exec()', function() {
-		it('should find first word and replace it', function() {
+		it('should find first word after comment and replace it', function() {
 			var cmd = new Replace( {
 				"with"  : "unit"
 			});
@@ -38,6 +38,17 @@ describe('Word', function() {
 			
 			var compiled = cmd.exec( "this */ test-case." );
 			assert.equal( "this */ unit-case.", compiled);
+		});
+		
+		it('should find first word and replace it', function() {
+			var cmd = new Replace( {
+				"with"  : "unit"
+			});
+			
+			assert.equal( true, (cmd != undefined) );
+			
+			var compiled = cmd.exec( "this is a test-case." );
+			assert.equal( "unit is a test-case.", compiled);
 		});
 	});
 
