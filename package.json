@@ -19,7 +19,7 @@
     "generate"
   ],
   
-  "main": "appbuildr.js",
+  "main": "index.js",
   
   "bin": {
     "appbuildr": "./bin/appbuildr.js"
