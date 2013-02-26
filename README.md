@@ -36,9 +36,9 @@ after nodejs is installed use npm to install appbuildr.
 
 ### API/JavaScript
 To load appbuildr in nodejs use require-function.
-'''javascript
+```javascript
 var appbuildr = require( "apbuildr" ); 
-'''
+```
 
 ##License: 
 MIT License (MIT).
