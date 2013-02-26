@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 
+console.log( "start appbuildr" );
+
 var cliArgs = process.argv.slice(2);
 
-if( cliArgs.length != 2) {
+if( cliArgs.length != 1) {
     console.log( "[ERROR] please use 3 arguments in appbuildr." );
-    console.log( "How to use: (parameter)" );
+    console.log( "How to use: " );
     console.log( "----------------------------------------------" );
-    console.log( "[1.] buildr-command." );
-    console.log( "[2.] project-description path (project.json)." );
+    console.log( "project/path>appbuildr <command>" );
+    console.log( "commands: is a command from project.json in path buildr.on.{?}" );
 }
 
-var path = cliArgs[1];
+var path = __dirname;
 console.log( "-- load project.json from path: " + path );
 
 var project = require( path + "/project.json" );
