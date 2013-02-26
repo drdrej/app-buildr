@@ -12,7 +12,7 @@ if( cliArgs.length != 1) {
     console.log( "commands: is a command from project.json in path buildr.on.{?}" );
 }
 
-var path = __dirname;
+var path = process.cwd();
 console.log( "-- load project.json from path: " + path );
 
 var project = require( path + "/project.json" );
