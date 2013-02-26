@@ -2,9 +2,10 @@
   "name": "appbuildr",
   
   "preferGlobal": true,
-  "version": "0.1.5",
+  "version": "0.1.8",
   
   "author": "drdrej",
+  
   "description": "a simple code generation tool for developers",
   "repository": {
     "type": "git",
@@ -17,6 +18,13 @@
     "build",
     "generate"
   ],
+  
+  "main": "appbuildr.js",
+  
+  "bin": {
+    "appbuildr": "./bin/appbuildr.js"
+  },
+  
   "dependencies": {
     "imagemagick": "*",
     "JSONSelect": "*",
@@ -42,8 +50,9 @@
   "engines": {
     "node": ">=0.8.19"
   },
+  
   "readmeFilename": "README.md",
-  "main": "appbuildr.js",
+  
   "directories": {
     "example": "example",
     "test": "test"
