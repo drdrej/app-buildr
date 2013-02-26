@@ -2,7 +2,7 @@
   "name": "appbuildr",
   
   "preferGlobal": true,
-  "version": "0.1.4",
+  "version": "0.1.5",
   
   "author": "drdrej",
   "description": "a simple code generation tool for developers",
