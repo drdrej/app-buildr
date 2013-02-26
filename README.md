@@ -5,7 +5,7 @@ Author: Andreas Siebert, ask@touchableheroes.com
 
 
 
-## !Attention:
+## Attention:
 This software is unstable. please use it carefuly.
 
 ## Description:
@@ -36,9 +36,9 @@ after nodejs is installed use npm to install appbuildr.
 
 ### API/JavaScript
 To load appbuildr in nodejs use require-function.
-    '''JavaScript
-    var appbuildr = require( "apbuildr" ); 
-    '''
+'''JavaScript
+var appbuildr = require( "apbuildr" ); 
+'''
 
 ##License: 
 MIT License (MIT).
