@@ -43,7 +43,13 @@ describe('MacroGeneratorStream', function() {
 			assert.equal( true, cursor.next() );
 			assert.equal( "word", cursor.macro.name );
 			
-			assert.equal( 10, cursor.instruction.start );
+			assert.equal( 19, cursor.instruction.start );
+			assert.equal( 19, cursor.instruction.end );
+			assert.equal( 19, cursor.offset );
+			
+			
+			var before = txt.substring(0, 19);
+			
 		});
 	});
 	

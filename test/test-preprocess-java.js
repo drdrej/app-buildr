@@ -26,7 +26,7 @@ var assert = require("assert");
 
 var fs = require( "fs" );
 var PreProcessor = require("../lib/PreProcessorImpl.js");
-var MacroParser = require("../lib/MacroManager.js");
+var MacroParser = require("../lib/MacroParser.js");
 
 describe('PreProcessorImpl', function() {
 
@@ -40,7 +40,7 @@ describe('PreProcessorImpl', function() {
 			var macros = new MacroParser();
 			
 			var path = __dirname + "/out-preprocess-java.test";
-			var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
+			var txt = 'public class /*[#word with:{{params.className}} #]    */ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
 			
 			var mp = new PreProcessor( txt, path, macros );
 			
@@ -48,12 +48,31 @@ describe('PreProcessorImpl', function() {
 			mp.preProcessStep();
 			
 			// check cursor:
-			assert.equal(19, mp.cursor.offset);
-//			
-//			
-//			
-//
-//			assert.equal(true, result);
+			assert.equal( 73, mp.cursor.offset);
+			
+			assert.equal( 15, mp.cursor.instruction.start );
+			assert.equal( 48, mp.cursor.instruction.end );			
+			assert.equal( 54, mp.cursor.scope.start);
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ MyPrototypeClass", txt1);
+			
+			
+			// -------------------------
+			// Test: next command
+			// -------------------------
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal( 129, mp.cursor.offset);
+			
+			assert.equal( 84, mp.cursor.instruction.start );
+			assert.equal( 114, mp.cursor.instruction.end );			
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ParentClass", txt1);
 		});
 	});
 });

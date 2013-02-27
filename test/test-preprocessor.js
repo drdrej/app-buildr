@@ -25,7 +25,7 @@ IN THE SOFTWARE.
 var assert = require("assert");
 
 var fs = require( "fs" );
-var MacroParser = require("../lib/MacroParser.js");
+var MacroParser = require("../lib/MacrosApi.js");
 
 describe('MacroParser', function() {
 
