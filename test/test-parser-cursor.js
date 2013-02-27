@@ -108,6 +108,35 @@ describe('MacroGeneratorStream', function() {
 		
 	});
 	
+	
+	describe('MacroParserCursor', function() {
+		var txt = 'public class /*[#replace broken macro in text';
+
+		var cursor = new MacroParserCursor( txt );
+		
+		it('should has next', function() {
+			assert.equal( true, cursor.next() );
+			
+//			assert.equal( "unknown", cursor.macro.name );
+			
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( -1, cursor.instruction.end );
+			assert.equal( 15, cursor.offset );
+		});
+		
+		it('should has end of instruction', function() {
+			var success = cursor.findInstructionEnd();
+
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( (txt.length - 1), cursor.instruction.end );
+			
+			assert.equal( false, success);
+//			
+//			
+//			assert.equal( txt.length, cursor.offset );
+		});
+	});	
+		
 	describe('#push()', function() {
 		var cursor = new MacroParserCursor( "test data [#should #] be written to file" );
 

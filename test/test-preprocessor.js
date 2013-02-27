@@ -116,4 +116,48 @@ describe('PreProcessorImpl', function() {
 			assert.equal( "*/ParentClass", txt1);
 		});
 	});
+	
+	describe('#preProcessStep()', function() {
+		it('content with broken replace-macro', function() {
+			var macros = new MacroParser();
+			
+			var path = __dirname + "/out-preprocess-broken.test";
+			var txt = 'public class /*[#replace broken macro';
+			
+			var mp = new PreProcessor( txt, path, macros );
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			assert.equal( 15, mp.cursor.instruction.start);
+			assert.equal( -1, mp.cursor.instruction.end);
+			
+			// check cursor:
+			assert.equal( 161, mp.cursor.offset);
+			
+			assert.equal( 15, mp.cursor.instruction.start );
+			assert.equal( 48, mp.cursor.instruction.end );			
+			assert.equal( 54, mp.cursor.scope.start);
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ MyPrototypeClass", txt1);
+			
+			
+			// -------------------------
+			// Test: next command
+			// -------------------------
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal( 129, mp.cursor.offset);
+			
+			assert.equal( 84, mp.cursor.instruction.start );
+			assert.equal( 114, mp.cursor.instruction.end );			
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ParentClass", txt1);
+		});
+	});
 });
