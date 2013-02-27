@@ -25,142 +25,95 @@ IN THE SOFTWARE.
 var assert = require("assert");
 
 var fs = require( "fs" );
-var MacroParser = require("../lib/MacrosApi.js");
+var PreProcessor = require("../lib/PreProcessorImpl.js");
+var MacroParser = require("../lib/MacroParser.js");
 
-describe('MacroParser', function() {
+describe('PreProcessorImpl', function() {
 
-	var mp = {};
 	
 	beforeEach(function(){
-		mp = new MacroParser("", "");
+		;
 	});
 	
-	
-	describe('#parseCommand() form commands with no args', function() {
-		it('uncomment-command with no args', function() {
-			var commandStr = "[#uncomment#]";
-			var result = mp.parseCommand(commandStr);
-
-			assert.equal("uncomment", result.name);
-		});
-
-		it('uncomment-command with no args', function() {
-			var commandStr = "[#uncomment #]";
-			var result = mp.parseCommand(commandStr);
-
-			assert.equal("uncomment", result.name);
-		});
-	});
-
-	describe('#parseCommand() for commands with args', function() {
-
-		it('replace command with one option AND word-syntax', function() {
-			var commandStr = "[#replace with:xyz #]";
-			var result = mp.parseCommand(commandStr);
-
-			assert.equal("replace", result.name);
-			assert.equal("xyz", result.params["with"]);
-		});
-
-		it('replace command with one option in string-syntax', function() {
-			var commandStr = '[#replace with:"xyz" #]';
-			var result = mp.parseCommand(commandStr);
-
-			assert.equal("replace", result.name);
-			assert.equal("xyz", result.params["with"]);
-
-		});
-
-		it('replace command with one option in mustache-syntax', function() {
-			var commandStr = '[#replace with:{{xyz}} #]';
-			var result = mp.parseCommand(commandStr);
-
-			console.log( "parse.result ::: %j", result );
-			assert.equal("replace", result.name);
-			assert.equal("{{xyz}}", result.params["with"]);
-
-		});
-
-	});
-
-	describe('#initCommand()', function() {
-		it('init replace-command with one parameter ("with") ', function() {
-			var cmd = mp.initCmd( "[#uncomment#]" );
-
-			var valid = cmd.validate();
-			console.log( "command  found ::: %j", cmd );
-
-			assert.equal( true, valid.success );
-			assert.equal("uncomment", cmd.name);
-		});
-		
-		it('init replace-command with one parameter ("with") ', function() {
-			var commandStr = "[#replace with:xyz #]";
-			var result = mp.parseCommand(commandStr);
-
-			assert.equal("replace", result.name);
-			assert.equal("xyz", result.params["with"]);
+	describe('#preProcessStep()', function() {
+		it('content with multiple word-macros', function() {
+			var macros = new MacroParser();
 			
-		});
-
-	});
-
-	describe('#preProcessContent()', function() {
-		it('found command-open-tag', function() {
-			var path = __dirname + "/output.test";
-
-			var result = mp.preProcessContent("dasdasdas[#replace", path);
-
-			assert.equal("end-position is wrong", result.msg);
-		});
-
-		it('found command-open-tag', function() {
-			var path = __dirname + "/output2.test";
-
-			var result = mp.preProcessContent('this is a [#replace token:"test" with:"testcase" #]test.',
-					path);
+			var path = __dirname + "/out-preprocess-java.test";
+			var txt = 'public class /*[#word with:{{params.className}} #]    */ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
 			
-			assert.equal(true, result);
-		});
-
-	});
-
-	
-	describe('#preProcessContent()', function() {
-		it('replace command with one option in mustache-syntax', function() {
-			var path = __dirname + "/out-preprocess.test";
-
-			var result = mp.preProcessContent('public class /*[#replace token : "MyPrototypeClass" with:"params.classNAme" #]    MyPrototypeClass extends',
-					path);
+			var mp = new PreProcessor( txt, path, macros );
 			
-			assert.equal(true, result);
-		});
-	});
-
-	describe('#preProcessContent()', function() {
-		it('replace multiple commands', function() {
-			var path = __dirname + "/out-multiple-commands.test";
-
-			var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r' 
-				  + '  public static final void main( String[] args ) {\n\r' 
-				  + '/*[#uncomment #]*/ \n\r'
-				  + '//    Sytem.out.println( "Hello World!" ); \n\r'
-				  + '}}';
-
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
 			
-			var result = mp.preProcessContent(txt, path);
-
-			var expected = 'public class /*[#word with:{{params.className}} #]*/ {{params.className}} extends /*[#word with:{{params.parent}} #]*/{{params.parent}} { \n\r' 
-				  + '  public static final void main( String[] args ) {\n\r' 
-				  + '/*[#uncomment #]*/ \n\r'
-				  + '    Sytem.out.println( "Hello World!" ); \n\r'
-				  + '}}';
-
-			assert.equal(true, result);
+			// check cursor:
+			assert.equal( 73, mp.cursor.offset);
 			
-			var data = fs.readFileSync( path, "utf-8");
-			assert.equal(expected, data);
+			assert.equal( 15, mp.cursor.instruction.start );
+			assert.equal( 48, mp.cursor.instruction.end );			
+			assert.equal( 54, mp.cursor.scope.start);
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ MyPrototypeClass", txt1);
+			
+			
+			// -------------------------
+			// Test: next command
+			// -------------------------
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal( 129, mp.cursor.offset);
+			
+			assert.equal( 84, mp.cursor.instruction.start );
+			assert.equal( 114, mp.cursor.instruction.end );			
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ParentClass", txt1);
 		});
 	});
 	
+	describe('#preProcessStep()', function() {
+		it('content with multiple replace-macros', function() {
+			var macros = new MacroParser();
+			
+			var path = __dirname + "/out-preprocess-java.test";
+			var txt = 'public class /*[#replace token:"extends" with:"keyword" #]*/ MyPrototypeClass extends ';
+			
+			var mp = new PreProcessor( txt, path, macros );
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal( 161, mp.cursor.offset);
+			
+			assert.equal( 15, mp.cursor.instruction.start );
+			assert.equal( 48, mp.cursor.instruction.end );			
+			assert.equal( 54, mp.cursor.scope.start);
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ MyPrototypeClass", txt1);
+			
+			
+			// -------------------------
+			// Test: next command
+			// -------------------------
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal( 129, mp.cursor.offset);
+			
+			assert.equal( 84, mp.cursor.instruction.start );
+			assert.equal( 114, mp.cursor.instruction.end );			
+			
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			assert.equal( "*/ParentClass", txt1);
+		});
+	});
 });

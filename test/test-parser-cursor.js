@@ -34,29 +34,84 @@ describe('MacroGeneratorStream', function() {
 	});
 	
 	
-	describe('#next()', function() {
+	describe('LifeCycle', function() {
 		var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
 
 		var cursor = new MacroParserCursor( txt );
      
-		it('should write to file', function() {
+		it('should has next', function() {
 			assert.equal( true, cursor.next() );
-			assert.equal( "word", cursor.macro.name );
 			
-			assert.equal( 19, cursor.instruction.start );
-			assert.equal( 19, cursor.instruction.end );
-			assert.equal( 19, cursor.offset );
-			
-			
-			var before = txt.substring(0, 19);
-			
+			assert.equal( "unknown", cursor.macro.name );
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( -1, cursor.instruction.end );
+			assert.equal( 15, cursor.offset );
 		});
+		
+		it('should has end of instruction', function() {
+			assert.equal( true, cursor.findInstructionEnd());
+			
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( 48, cursor.instruction.end );
+			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
+			
+			assert.equal( cursor.instruction.end, cursor.offset );
+			
+			// offset will be moved after
+			assert.equal( 48, cursor.offset );
+		});
+		
+		it('should extract instruction', function() {
+			assert.equal( "[#word with:{{params.className}} #]", 
+					cursor.extractInstruction() );
+			
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( 48, cursor.instruction.end );
+			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
+			assert.equal( true, (cursor.offset > cursor.instruction.end));
+			
+			// offset will be moved after extract- behind the macro.
+			assert.equal( 50, cursor.offset );
+		});
+		
+		it('should find scope-start', function() {
+			assert.equal( 50, cursor.findScopeStart() );
+			
+			assert.equal( 50, cursor.offset );
+			
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( 48, cursor.instruction.end );
+			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
+			assert.equal( true, (cursor.offset > cursor.instruction.end));
+		});
+		
+		it('should find scope-end', function() {
+			assert.equal( 80, cursor.findScopeEnd() );
+			
+			assert.equal( 50, cursor.offset );
+			
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( 48, cursor.instruction.end );
+			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
+			assert.equal( true, (cursor.offset > cursor.instruction.end));
+		});
+		
+		
+		it('should find scope-end', function() {
+			assert.equal( "*/ MyPrototypeClass extends /*", cursor.extractScope() );
+			assert.equal( 50, cursor.offset );
+			assert.equal( 15, cursor.instruction.start );
+			assert.equal( 48, cursor.instruction.end );
+			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
+			assert.equal( true, (cursor.offset > cursor.instruction.end));
+		});
+		
 	});
 	
 	describe('#push()', function() {
 		var cursor = new MacroParserCursor( "test data [#should #] be written to file" );
 
-		it('should write to file', function() {
+		it('unknown command', function() {
 			assert.equal( true, cursor.next() );
 			
 			assert.equal( 10, cursor.instruction.start );

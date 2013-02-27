@@ -40,6 +40,18 @@ describe('Replace', function() {
 			var compiled = cmd.exec( "this is a test-case." );
 			assert.equal("this is a unit-case.", compiled);
 		});
+		
+		it('should replace token with some passed value', function() {
+			var cmd = new Replace( {
+				"token" : "test",
+				"with"  : "unit"
+			});
+			
+			assert.equal( true, (cmd != undefined) );
+			
+			var compiled = cmd.exec( "this is a test-case." );
+			assert.equal("this is a unit-case.", compiled);
+		});
 	});
 
 });
