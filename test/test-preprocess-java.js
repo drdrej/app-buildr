@@ -24,38 +24,36 @@ IN THE SOFTWARE.
 
 var assert = require("assert");
 
-var MacroParserCursor = require("../lib/MacroParserCursor.js");
+var fs = require( "fs" );
+var PreProcessor = require("../lib/PreProcessorImpl.js");
+var MacroParser = require("../lib/MacroManager.js");
 
-describe('MacroGeneratorStream', function() {
+describe('PreProcessorImpl', function() {
 
-
+	
 	beforeEach(function(){
 		;
 	});
 	
-	
-	describe('#next()', function() {
-		var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
-
-		var cursor = new MacroParserCursor( txt );
-     
-		it('should write to file', function() {
-			assert.equal( true, cursor.next() );
-			assert.equal( "word", cursor.macro.name );
+	describe('#preProcessStep()', function() {
+		it('preprocess passed content', function() {
+			var macros = new MacroParser();
 			
-			assert.equal( 10, cursor.instruction.start );
+			var path = __dirname + "/out-preprocess-java.test";
+			var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r';
+			
+			var mp = new PreProcessor( txt, path, macros );
+			
+			assert.equal( true, mp.hasMoreCommands() );
+			mp.preProcessStep();
+			
+			// check cursor:
+			assert.equal(19, mp.cursor.offset);
+//			
+//			
+//			
+//
+//			assert.equal(true, result);
 		});
 	});
-	
-	describe('#push()', function() {
-		var cursor = new MacroParserCursor( "test data [#should #] be written to file" );
-
-		it('should write to file', function() {
-			assert.equal( true, cursor.next() );
-			
-			assert.equal( 10, cursor.instruction.start );
-		});
-	});
-
-	
 });

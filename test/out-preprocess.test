@@ -1,1 +1,1 @@
-public class /*[#replace token : "BasicOpenDBHandler" with:"params.classNAme" #]    params.classNAme extends
+public class /*[#replace token : "MyPrototypeClass" with:"params.classNAme" #]    params.classNAme extends

@@ -24,11 +24,18 @@ IN THE SOFTWARE.
 
 var assert = require("assert");
 
+var fs = require( "fs" );
 var MacroParser = require("../lib/MacroParser.js");
-var mp = new MacroParser("", "");
 
 describe('MacroParser', function() {
 
+	var mp = {};
+	
+	beforeEach(function(){
+		mp = new MacroParser("", "");
+	});
+	
+	
 	describe('#parseCommand() form commands with no args', function() {
 		it('uncomment-command with no args', function() {
 			var commandStr = "[#uncomment#]";
@@ -123,10 +130,36 @@ describe('MacroParser', function() {
 		it('replace command with one option in mustache-syntax', function() {
 			var path = __dirname + "/out-preprocess.test";
 
-			var result = mp.preProcessContent('public class /*[#replace token : "BasicOpenDBHandler" with:"params.classNAme" #]    BasicOpenDBHandler extends',
+			var result = mp.preProcessContent('public class /*[#replace token : "MyPrototypeClass" with:"params.classNAme" #]    MyPrototypeClass extends',
 					path);
 			
 			assert.equal(true, result);
+		});
+	});
+
+	describe('#preProcessContent()', function() {
+		it('replace multiple commands', function() {
+			var path = __dirname + "/out-multiple-commands.test";
+
+			var txt = 'public class /*[#word with:{{params.className}} #]*/ MyPrototypeClass extends /*[#word with:{{params.parent}} #]*/ParentClass { \n\r' 
+				  + '  public static final void main( String[] args ) {\n\r' 
+				  + '/*[#uncomment #]*/ \n\r'
+				  + '//    Sytem.out.println( "Hello World!" ); \n\r'
+				  + '}}';
+
+			
+			var result = mp.preProcessContent(txt, path);
+
+			var expected = 'public class /*[#word with:{{params.className}} #]*/ {{params.className}} extends /*[#word with:{{params.parent}} #]*/{{params.parent}} { \n\r' 
+				  + '  public static final void main( String[] args ) {\n\r' 
+				  + '/*[#uncomment #]*/ \n\r'
+				  + '    Sytem.out.println( "Hello World!" ); \n\r'
+				  + '}}';
+
+			assert.equal(true, result);
+			
+			var data = fs.readFileSync( path, "utf-8");
+			assert.equal(expected, data);
 		});
 	});
 	

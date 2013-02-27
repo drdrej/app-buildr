@@ -1,0 +1,5 @@
+public class /*[#word with:{{params.className}} #]*/ {{params.className}} extends /*[#word with:{{params.parent}} #]*/ParentClass { 
+  public static final void main( String[] args ) {
+/*[#uncomment #]*/ 
+//    Sytem.out.println( "Hello World!" ); 
+}}
