@@ -45,7 +45,7 @@ describe('MacroGeneratorStream', function() {
 			assert.equal( "unknown", cursor.macro.name );
 			assert.equal( 15, cursor.instruction.start );
 			assert.equal( -1, cursor.instruction.end );
-			assert.equal( 15, cursor.offset );
+			assert.equal( 0, cursor.offset );
 		});
 		
 		it('should has end of instruction', function() {
@@ -55,10 +55,8 @@ describe('MacroGeneratorStream', function() {
 			assert.equal( 48, cursor.instruction.end );
 			assert.equal( true, (cursor.instruction.end > cursor.instruction.start) );
 			
-			assert.equal( cursor.instruction.end, cursor.offset );
-			
 			// offset will be moved after
-			assert.equal( 48, cursor.offset );
+			assert.equal( 0, cursor.offset );
 		});
 		
 		it('should extract instruction', function() {
@@ -121,7 +119,7 @@ describe('MacroGeneratorStream', function() {
 			
 			assert.equal( 15, cursor.instruction.start );
 			assert.equal( -1, cursor.instruction.end );
-			assert.equal( 15, cursor.offset );
+			assert.equal( 0, cursor.offset );
 		});
 		
 		it('should has end of instruction', function() {
@@ -129,8 +127,9 @@ describe('MacroGeneratorStream', function() {
 
 			assert.equal( 15, cursor.instruction.start );
 			assert.equal( (txt.length - 1), cursor.instruction.end );
-			
 			assert.equal( false, success);
+			assert.equal( -1, cursor.scope.start );
+			assert.equal( -1, cursor.scope.end );
 //			
 //			
 //			assert.equal( txt.length, cursor.offset );

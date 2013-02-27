@@ -44,6 +44,9 @@ describe('PreProcessorImpl', function() {
 			
 			var mp = new PreProcessor( txt, path, macros );
 			
+			// -------------------------
+			// Test: next command
+			// -------------------------
 			assert.equal( true, mp.hasMoreCommands() );
 			mp.preProcessStep();
 			
@@ -61,59 +64,54 @@ describe('PreProcessorImpl', function() {
 			// -------------------------
 			// Test: next command
 			// -------------------------
-			
 			assert.equal( true, mp.hasMoreCommands() );
 			mp.preProcessStep();
 			
 			// check cursor:
 			assert.equal( 129, mp.cursor.offset);
 			
+			
 			assert.equal( 84, mp.cursor.instruction.start );
-			assert.equal( 114, mp.cursor.instruction.end );			
+			assert.equal( 114, mp.cursor.instruction.end );		
+			
+			assert.equal( 116, mp.cursor.scope.start);
+			assert.equal( 133, mp.cursor.scope.end );
 			
 			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
+			
 			assert.equal( "*/ParentClass", txt1);
 		});
 	});
 	
 	describe('#preProcessStep()', function() {
-		it('content with multiple replace-macros', function() {
+		it('content with word-macro', function() {
 			var macros = new MacroParser();
 			
-			var path = __dirname + "/out-preprocess-java.test";
-			var txt = 'public class /*[#replace token:"extends" with:"keyword" #]*/ MyPrototypeClass extends ';
-			
+			var path = __dirname + "/out-preprocess-replace.test";
+			var txt = 'public class /*[#word with:"keyword" #]*/ MyPrototypeClass extends ';
+
 			var mp = new PreProcessor( txt, path, macros );
 			
 			assert.equal( true, mp.hasMoreCommands() );
-			mp.preProcessStep();
+			assert.equal( undefined, mp.preProcessStep());
 			
-			// check cursor:
-			assert.equal( 161, mp.cursor.offset);
+			assert.equal( 58, mp.cursor.offset);
 			
 			assert.equal( 15, mp.cursor.instruction.start );
-			assert.equal( 48, mp.cursor.instruction.end );			
-			assert.equal( 54, mp.cursor.scope.start);
+			assert.equal( 37, mp.cursor.instruction.end );		
 			
-			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
-			assert.equal( "*/ MyPrototypeClass", txt1);
+			assert.equal( 39, mp.cursor.scope.start);
+			
+			assert.equal( 66, mp.cursor.scope.end);
+
+			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.scope.end );
+			assert.equal( "*/ MyPrototypeClass extends", txt1);
 			
 			
 			// -------------------------
 			// Test: next command
 			// -------------------------
-			
-			assert.equal( true, mp.hasMoreCommands() );
-			mp.preProcessStep();
-			
-			// check cursor:
-			assert.equal( 129, mp.cursor.offset);
-			
-			assert.equal( 84, mp.cursor.instruction.start );
-			assert.equal( 114, mp.cursor.instruction.end );			
-			
-			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
-			assert.equal( "*/ParentClass", txt1);
+			assert.equal( false, mp.hasMoreCommands() );
 		});
 	});
 	
@@ -127,37 +125,22 @@ describe('PreProcessorImpl', function() {
 			var mp = new PreProcessor( txt, path, macros );
 			
 			assert.equal( true, mp.hasMoreCommands() );
-			mp.preProcessStep();
 			
-			assert.equal( 15, mp.cursor.instruction.start);
+			var result1 = mp.preProcessStep();
+			assert.equal( true, (result1 != undefined) );
+			assert.equal( "MACRO_CLOSE_TAG", result1.err );
+			
+			assert.equal( -1, mp.cursor.instruction.start);
 			assert.equal( -1, mp.cursor.instruction.end);
+
+			// offset-cursor is before command:
+			assert.equal( (txt.length-1), mp.cursor.offset);
 			
-			// check cursor:
-			assert.equal( 161, mp.cursor.offset);
-			
-			assert.equal( 15, mp.cursor.instruction.start );
-			assert.equal( 48, mp.cursor.instruction.end );			
-			assert.equal( 54, mp.cursor.scope.start);
-			
-			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
-			assert.equal( "*/ MyPrototypeClass", txt1);
-			
-			
-			// -------------------------
-			// Test: next command
-			// -------------------------
-			
-			assert.equal( true, mp.hasMoreCommands() );
-			mp.preProcessStep();
-			
-			// check cursor:
-			assert.equal( 129, mp.cursor.offset);
-			
-			assert.equal( 84, mp.cursor.instruction.start );
-			assert.equal( 114, mp.cursor.instruction.end );			
-			
-			var txt1 = txt.substring( mp.cursor.scope.start, mp.cursor.offset);
-			assert.equal( "*/ParentClass", txt1);
+			// scope-positions not valid (-1)
+			assert.equal( -1, mp.cursor.scope.start);
+			assert.equal( -1, mp.cursor.scope.end);
+						
+			assert.equal( false, mp.hasMoreCommands() );
 		});
 	});
 });

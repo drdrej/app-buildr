@@ -41,14 +41,14 @@ describe('Word', function() {
 			assert.equal( true, (cmd != undefined) );
 			
 			var compiled = cmd.exec( "this */ test-case." );
-			assert.equal( "this */ unit-case.", compiled);
+			assert.equal( "this */ unit", compiled);
 		});
 		
 		it('should find first word and replace it', function() {			
 			assert.equal( true, (cmd != undefined) );
 			
 			var compiled = cmd.exec( "this is a test-case." );
-			assert.equal( "unit is a test-case.", compiled);
+			assert.equal( "unit", compiled);
 		});
 	});
 
