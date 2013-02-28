@@ -94,13 +94,13 @@ prototype-files in a template, based on used macros.
 
 An example of a prototype-file:  
 
-´´´java
+```java
 package /*[#word with:{{params.pckg}}]*/ com.example.prototype;
 
 public class /*[#word with:{{params.className}}]*/ PrototypeEntity extends Entity {
 ...
 }
-´´´
+```
 
 ##### Preprocessor-Macros
 Use built-in macros to simplify template-creation.
