@@ -10,8 +10,8 @@ This software is unstable. please use it carefuly.
 
 ## Description:
 A code-generator to build apps. App-Buildr use templates and JavaScript 
-to build boiler-plate-code for your apps. the concept is based on 
-model-driven-architecture idea and templating.
+to build boiler-plate-code for your apps. the concept is based on the idea of
+model-driven-architecture and templating.
 
 ## Usage
 
