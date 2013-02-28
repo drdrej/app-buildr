@@ -142,14 +142,14 @@ var appbuildr = require( "apbuildr" );
 
 To create this project I have used different open-source-projects:
 
-1. JSONSelect - to select elements in the model.
-2. mu2 - to interpret mustache-syntax in my templates.
-3. wrench - to work with directories.
-4. mocha - to test
-5. pegjs - to implement the preprocessor-macro-parser.
+1. [JSONSelect] (http://jsonselect.org/#overview) - to select elements in the model.
+2. [mu2] (https://github.com/raycmorgan/Mu) - to interpret mustache-syntax in my templates.
+3. [wrench] (https://github.com/ryanmcgrath/wrench-js) - to work with directories.
+4. [mocha] (http://visionmedia.github.com/mocha/) - to test
+5. [pegjs] (http://pegjs.majda.cz/) - to implement the preprocessor-macro-parser.
 
 
-### Links 
+##Links: 
 
 
 
