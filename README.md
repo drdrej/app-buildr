@@ -112,9 +112,9 @@ prototype-files in a template. To modify the prototype-file appbuildr use
 An example of a prototype-file:  
 
 ```java
-package /*[#word with:{{params.pckg}} #]*/ com.example.prototype;
+package /* [#word with:{{params.pckg}} #]*/ com.example.prototype;
 
-public class /*[#word with:{{params.className}} #]*/ PrototypeEntity extends Entity {
+public class /* [#word with:{{params.className}} #] */ PrototypeEntity extends Entity {
 ...
 }
 ```
