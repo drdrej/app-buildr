@@ -1,8 +1,15 @@
 {
     "modelVersion": 1,
+    
+    "project"  : {
+        "name" : "RestServerApp",
+        "type" : "Java",
+        "ide"  : "eclipse"  
+    },
+    
     "classDesc": [ {
           "pckg": "com.example",
           "msg": "Hello world!",
           "name": "MyClass"
-    }]
+    } ]
 }
