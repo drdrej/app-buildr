@@ -17,11 +17,10 @@ model-driven-architecture idea and templating.
 
 1. install appbuildr
 2. create prototype-project
-3. create/download transformers
-4. declare model
-5. fill project-files with macros
-6. create app-model
-7. generate app-boilerplate-code
+3. create transformers
+4. create project-model
+5. enrich prototype-files with macros
+6. generate app-boilerplate-code
 
 ### Where to use appbuildr?
 
@@ -51,11 +50,25 @@ Model is a simple json-file. The structure of the model is based on used transfo
 
 ´´´javascript
 {
-"modelVersion" : 1,
+  "modelVersion" : 1,
     
-"app" : {
-...
-}
+  "app" : {
+     ...
+     
+     "entities" : [
+         { 
+            "name"  : "MyEntity_1",
+            "columns" : [ ... ] 
+         
+         },
+         { 
+            "name"  : "MyEntity_2",
+            "columns" : [ ... ]
+         
+         },
+         ...
+     ]
+  }
 }
 ´´´
 
@@ -67,7 +80,7 @@ and use a suffix *.tmpl.
 
 ##### Create a class from template
 
-For example in my apps i create database-entities for my android-apps based on a
+For example in my apps I create database-entities for my android-apps based on a
 template Entity.java.tmpl.
 
 A template might look like this:
@@ -95,12 +108,16 @@ prototype-files in a template, based on used macros.
 An example of a prototype-file:  
 
 ```java
-package /*[#word with:{{params.pckg}}]*/ com.example.prototype;
+package /*[#word with:{{params.pckg}} #]*/ com.example.prototype;
 
-public class /*[#word with:{{params.className}}]*/ PrototypeEntity extends Entity {
+public class /*[#word with:{{params.className}} #]*/ PrototypeEntity extends Entity {
 ...
 }
 ```
+
+In this example I've used a word-macro to replace the next word in text 
+with a passed mustache-variable.
+
 
 ##### Preprocessor-Macros
 Use built-in macros to simplify template-creation.
