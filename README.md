@@ -51,11 +51,11 @@ Model is a simple json-file. The structure of the model is based on used transfo
 
 ´´´javascript
 {
-   "modelVersion" : 1,
+"modelVersion" : 1,
     
-   "app" : {
-    ...
-   }
+"app" : {
+...
+}
 }
 ´´´
 
@@ -72,14 +72,35 @@ template Entity.java.tmpl.
 
 A template might look like this:
 
-´´´java
-package {{params.pckg}};
 
-public class {{params.entity}} extends Entity {
-   ...
+    package {{params.pckg}};
+    
+    public class {{params.entity}} extends Entity {
+    ...
+    }
+
+
+I don't like template-files, because I can't use my favorised IDE to write them. To have a good-working syntax-highliting 
+a used editor must support both languages: template- and source-language. 
+
+My common way of building solutions is:
+1. build a prototype
+2. build template from prototype
+3. build something from template
+
+Appbuild supports some text-editing-macros to gives you a way to create 
+templates directly from prototypes. An implemented pre-processor convert
+prototype-files in a template, based on used macros.
+
+An example of a prototype-file:  
+
+´´´java
+package /*[#word with:{{params.pckg}}]*/ com.example.prototype;
+
+public class /*[#word with:{{params.className}}]*/ PrototypeEntity extends Entity {
+...
 }
 ´´´
-
 
 ##### Preprocessor-Macros
 Use built-in macros to simplify template-creation.
@@ -89,13 +110,7 @@ Predefined macros:
 2. uncomment
 3. ... 
 
-I don't like template-files, because I can't use my favorised IDE to write them. To have a good-working syntax-highliting 
-a used editor must support both languages: template- and source-language. 
 
-My common way of building solutions is:
-1. build a prototype
-2. build template from prototype
-3. build something from template
 
 
 
