@@ -128,9 +128,10 @@ Use built-in macros to simplify template-creation.
 
 Predefined macros:
 ------------------
-1. word
-2. uncomment
-3. ... 
+1. word - replace next word with a passed string or mustache-variable.
+   
+2. uncomment - uncomment the next commented line. 
+WARNING: supports only java-single-comment '//' at this moment
 
 
 ### API/JavaScript
@@ -138,6 +139,16 @@ To load appbuildr in nodejs use require-function.
 ```javascript
 var appbuildr = require( "apbuildr" ); 
 ```
+
+### Libraries and third-party-products
+
+To create this project I have used different open-source-projects:
+-----------------------------------------------------------------
+1. JSONSelect - to select elements in the model.
+2. mu2 - to interpret mustache-syntax in my templates.
+3. wrench - to work with directories.
+4. mocha - to test
+5. pegjs - to implement the preprocessor-macro-parser.
 
 
 ### Links 
