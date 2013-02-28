@@ -1,4 +1,4 @@
-app-buildr
+appbuildr
 ==========
 
 Author: Andreas Siebert, ask@touchableheroes.com
