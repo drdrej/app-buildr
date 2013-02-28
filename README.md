@@ -1,5 +1,6 @@
 appbuildr
 ==========
+-- inspired by model-driven-architecture.
 
 Author: Andreas Siebert, ask@touchableheroes.com
 
