@@ -17,8 +17,8 @@ model-driven-architecture and templating.
 
 1. install appbuildr
 2. create prototype-project
-3. create transformers
-4. create project-model
+3. create model
+4. create transformers
 5. enrich prototype-files with macros
 6. generate app-boilerplate-code
 
@@ -33,20 +33,21 @@ after nodejs is installed use npm to install appbuildr.
 
     npm install appbuildr -g
 
-### Create Prototype-Project
+### Create prototype-project
 Appbuildr is a tool to copy and create files from templates based on a specified model.
 Fist of all, before you start you will need a prototype-project. A prototype-project
 is a project with some predefined files for your main-project. 
 
 For example I use appbuildr to create boilerplate-code in my android-apps. To use it, i've created 
 an android-prototype-project. In this eclipse-project I do all my "research-stuff" for the main-project. 
-So, I config my settings, create some java-files for different solutions. And use all this stuff 
-later in appbuildr to derive my main-rpoject from prototype.
+So, I config my settings, create some java-files and some xmls. And use all this stuff 
+later in appbuildr to derive my final application from prototype.
 
 
-#### Model
+### Create model
 
-Model is a simple json-file. The structure of the model is based on used transformers. 
+Model is a simple json-file. The structure of the model is based on prefered transformers. 
+A model-file is your way to describe a solution. Here is an example of a model-file:
 
 ```javascript
     {
@@ -71,6 +72,71 @@ Model is a simple json-file. The structure of the model is based on used transfo
     }
     }
 ```
+
+Models will be validated and transformed into code by transformers. 
+
+
+### Transformr
+
+Transformr is a java-script-object declared in this way:
+```javascript
+module.exports = {
+    
+    // model-version. is important to validate later against the buildr and transformrs
+    modelVersion : 1,
+    
+    // model-query:
+    query : ".entities > *",
+    
+    // description, will be used to log:
+	desc : "Create entities",
+
+    // transformation.function:
+	bind : function(entity, model) {	
+       ...
+	}
+};
+
+```
+
+```javascript
+module.exports = {
+    modelVersion : 1,
+
+	query : ".entities > *",
+    
+	desc : "Create entities",
+
+	bind : function(entity, model) {	
+		var fileModel = model.vfs;
+		
+        // create dir-structure:
+		var dir = fileModel.dirs( pckgPath );
+		var fileName = entity.name + ".java";
+		
+        // path to template-dir:
+		var path = model.appDefinition.projectTemplate + "/templates";
+		
+        // append template-based file:
+		dir.add("tmpl", fileName, "create java from template.",
+				true, 
+                {
+					templatePath : path,
+					template : "PrototypeEntity.java.tmpl",
+
+					className : entity.name,
+                    pckg      : "com.example.entities"
+		});
+	}
+};
+
+```
+
+
+
+ransformation-function
+
+
 
 #### Templates
 
