@@ -76,7 +76,7 @@ A model-file is your way to describe a solution. Here is an example of a model-f
 Models will be validated and transformed into code by transformers. 
 
 
-### create transformrs
+### Create transformrs
 
 Transformr is a java-script-object declared in this way:
 ```javascript
@@ -139,7 +139,7 @@ Transformers must be placed in a transformr-dir. Check example-code!
 
 
 
-#### Templates
+#### How to use templates in appbuildr?
 
 Teplates are files enriched with [mustache-syntax] (http://mustache.github.com/) 
 and use a suffix *.tmpl.
