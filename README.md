@@ -76,7 +76,7 @@ A model-file is your way to describe a solution. Here is an example of a model-f
 Models will be validated and transformed into code by transformers. 
 
 
-### Transformr
+### create transformrs
 
 Transformr is a java-script-object declared in this way:
 ```javascript
@@ -135,6 +135,7 @@ module.exports = {
 
 ```
 
+Transformers must be placed in a transformr-dir. Check example-code!
 
 
 
