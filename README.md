@@ -175,9 +175,9 @@ I've tried to rebuild this workflow in appbuildr.
 Appbuild supports some text-editing-macros to gives you a way to create 
 templates directly from prototypes. An implemented pre-processor convert
 prototype-files in a template. To modify the prototype-file appbuildr use 
-.
+macros (described later).
 
-An example of a prototype-file:  
+An example of a prototype-file written in Java Programming Language filled with macros:  
 
 ```java
 package /* [#word with:{{params.pckg}} #]*/ com.example.prototype;
