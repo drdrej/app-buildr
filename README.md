@@ -31,7 +31,7 @@ I use appbuildr to create basic-structure of my android-apps and plan to use it 
 appbuildr is a nodejs based product. to use it in your dev-environment you need to install nodejs and npm.
 after nodejs is installed use npm to install appbuildr.
 
-    npm install appbuildr
+    npm install appbuildr -g
 
 ### Create Prototype-Project
 Appbuildr is a tool to copy and create files from templates based on a specified model.
