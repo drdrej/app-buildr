@@ -99,6 +99,9 @@ module.exports = {
 
 ```
 
+
+Example of a transformr to create entity-classes:
+
 ```javascript
 module.exports = {
     modelVersion : 1,
@@ -132,9 +135,6 @@ module.exports = {
 
 ```
 
-
-
-ransformation-function
 
 
 
