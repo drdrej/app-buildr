@@ -97,7 +97,6 @@ I don't like template-files, because I can't use my favorised IDE to write them.
 you have to use an editor with support for both languages: template- and source-language. 
 
 My common way of building solutions is:
----------------------------------------
 1. build a prototype
 2. build template from prototype
 3. build product from template
@@ -127,9 +126,8 @@ with a passed mustache-variable.
 Use built-in macros to simplify template-creation.
 
 Predefined macros:
-------------------
+
 1. word - replace next word with a passed string or mustache-variable.
-   
 2. uncomment - uncomment the next commented line. 
 WARNING: supports only java-single-comment '//' at this moment
 
@@ -143,7 +141,7 @@ var appbuildr = require( "apbuildr" );
 ### Libraries and third-party-products
 
 To create this project I have used different open-source-projects:
------------------------------------------------------------------
+
 1. JSONSelect - to select elements in the model.
 2. mu2 - to interpret mustache-syntax in my templates.
 3. wrench - to work with directories.
