@@ -93,17 +93,21 @@ A template might look like this:
     }
 
 
-I don't like template-files, because I can't use my favorised IDE to write them. To have a good-working syntax-highliting 
-a used editor must support both languages: template- and source-language. 
+I don't like template-files, because I can't use my favorised IDE to write them. For good-working syntax-highliting 
+you have to use an editor with support for both languages: template- and source-language. 
 
 My common way of building solutions is:
+---------------------------------------
 1. build a prototype
 2. build template from prototype
 3. build something from template
 
+I've tried to rebuild this workflow in appbuildr. 
+
 Appbuild supports some text-editing-macros to gives you a way to create 
 templates directly from prototypes. An implemented pre-processor convert
-prototype-files in a template, based on used macros.
+prototype-files in a template. To modify the prototype-file appbuildr use 
+.
 
 An example of a prototype-file:  
 
@@ -123,22 +127,10 @@ with a passed mustache-variable.
 Use built-in macros to simplify template-creation.
 
 Predefined macros:
+------------------
 1. word
 2. uncomment
 3. ... 
-
-
-
-
-
-
-
-4. , which (f.e. Eclipse or NetBeans) 
-to create my template-code.
-
-
-
-Before we start to work with appbuildr we need a prototype.
 
 
 ### API/JavaScript
@@ -146,6 +138,12 @@ To load appbuildr in nodejs use require-function.
 ```javascript
 var appbuildr = require( "apbuildr" ); 
 ```
+
+
+### Links 
+
+
+
 
 
 ##License: 
