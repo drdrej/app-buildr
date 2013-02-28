@@ -164,6 +164,7 @@ I don't like template-files, because I can't use my favorised IDE to write them.
 you have to use an editor with support for both languages: template- and source-language. 
 
 My common way of building solutions is:
+
 1. build a prototype
 2. build template from prototype
 3. build product from template
