@@ -48,11 +48,11 @@ later in appbuildr to derive my main-rpoject from prototype.
 
 Model is a simple json-file. The structure of the model is based on used transformers. 
 
-´´´javascript
-{
-  "modelVersion" : 1,
+```javascript
+    {
+    "modelVersion" : 1,
     
-  "app" : {
+    "app" : {
      ...
      
      "entities" : [
@@ -68,9 +68,9 @@ Model is a simple json-file. The structure of the model is based on used transfo
          },
          ...
      ]
-  }
-}
-´´´
+    }
+    }
+```
 
 #### Templates
 
