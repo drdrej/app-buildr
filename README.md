@@ -51,16 +51,58 @@ Model is a simple json-file. The structure of the model is based on used transfo
 
 ´´´javascript
 {
-   "app" : {
    "modelVersion" : 1,
     
-	"app" : {
-      ...
+   "app" : {
+    ...
    }
 }
+´´´
 
 #### Templates
 
+Teplates are files enriched with [mustache-syntax] (http://mustache.github.com/) 
+and use a suffix *.tmpl.
+
+
+##### Create a class from template
+
+For example in my apps i create database-entities for my android-apps based on a
+template Entity.java.tmpl.
+
+A template might look like this:
+
+´´´java
+package {{params.pckg}};
+
+public class {{params.entity}} extends Entity {
+   ...
+}
+´´´
+
+
+##### Preprocessor-Macros
+Use built-in macros to simplify template-creation.
+
+Predefined macros:
+1. word
+2. uncomment
+3. ... 
+
+I don't like template-files, because I can't use my favorised IDE to write them. To have a good-working syntax-highliting 
+a used editor must support both languages: template- and source-language. 
+
+My common way of building solutions is:
+1. build a prototype
+2. build template from prototype
+3. build something from template
+
+
+
+
+
+4. , which (f.e. Eclipse or NetBeans) 
+to create my template-code.
 
 
 
