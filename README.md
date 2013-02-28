@@ -100,7 +100,7 @@ My common way of building solutions is:
 ---------------------------------------
 1. build a prototype
 2. build template from prototype
-3. build something from template
+3. build product from template
 
 I've tried to rebuild this workflow in appbuildr. 
 
