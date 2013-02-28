@@ -200,9 +200,32 @@ WARNING: supports only java-single-comment '//' at this moment
 
 
 ### API/JavaScript
-To load appbuildr in nodejs use require-function.
+
+You can use appbuildr programmaticaly:
+
 ```javascript
-var appbuildr = require( "apbuildr" ); 
+
+// load appbuildr:
+var Buildr = require( "apbuildr" ); 
+
+// init appbuildr
+var buildr = new Buildr("path/to/my/output/dir", 
+		"path/to/my/prototype" );
+
+// to delete the complete project use: 
+// buildr.deleteProject();
+
+// clean up only some dirs and files 
+// to rebuild the most important stuff:
+buildr.cleanup();
+
+// -- call transformation "create-db-entities"
+buildr.use( "create-db-entities" );
+
+// generate the project:
+buildr.generate();
+
+buildr.close();
 ```
 
 ### Libraries and third-party-products
