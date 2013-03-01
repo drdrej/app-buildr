@@ -3,8 +3,18 @@
     
     "project"  : {
         "name" : "RestServerApp",
-        "type" : "Java",
-        "ide"  : "eclipse"  
+        "ide"  : "eclipse",
+        
+        "build" : {
+          "tool" :  "maven"
+        },
+        
+        "structure" :  [
+             "src/main/java",
+             "src/main/resources",
+             "src/main/webapp/WEB-INF",
+             "target"
+        ]
     },
     
     "classDesc": [ {
