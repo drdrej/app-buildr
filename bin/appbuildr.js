@@ -23,7 +23,7 @@ var cmd = cliArgs[ 0 ];
 console.log('use cli-args: ', cliArgs );
 
 var Buildr = require( __dirname + "/../lib/Buildr.js" );
-var buildr = new Buildr( project.path.generated, project.path.templates );
+var buildr = new Buildr( project.path.generated, project.path.draft );
 
 var commandRegistry = project.buildr.on;
 

@@ -2,23 +2,31 @@
     "modelVersion": 1,
     
     "project"  : {
+        "name" : "RestServerApp",
+        "ide"  : "eclipse",
+    
         "app"  : {
             "name" : "HelloWorldApp",
             "pckg" : "com.example.appbuildr.java.app.hello"
         },
         
-        "name" : "RestServerApp",
-        "ide"  : "eclipse",
         
         "build" : {
           "tool" :  "maven"
         },
         
         "structure" :  [
+        	 "appbuildr/gen",
+        	 
              "src/main/java",
              "src/main/resources",
              "src/main/webapp/WEB-INF",
              "target"
+        ],
+        
+        "cleanup" : [
+        	"target",
+        	"appbuildr/gen"
         ]
     },
     

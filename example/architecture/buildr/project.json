@@ -1,6 +1,6 @@
 {
    "path" : {
-       "templates"  : "C:/home/projects/android-mrtan/sources/sdk-apklib/app-buildr/script/example",
+       "draft"  	: "C:/home/projects/android-mrtan/sources/sdk-apklib/app-buildr/script/example",
        "generated"  : "C:/home/projects/android-mrtan/sources/sdk-apklib/app-buildr/script/example/gen"
    },    
    
@@ -13,6 +13,10 @@
             
             "java" : [
             
+            ],
+            
+            "clean" : [
+              "sdk/cleanup"
             ]
         }
    }
