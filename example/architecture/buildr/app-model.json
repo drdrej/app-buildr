@@ -2,6 +2,11 @@
     "modelVersion": 1,
     
     "project"  : {
+        "app"  : {
+            "name" : "HelloWorldApp",
+            "pckg" : "com.example.appbuildr.java.app.hello"
+        },
+        
         "name" : "RestServerApp",
         "ide"  : "eclipse",
         
