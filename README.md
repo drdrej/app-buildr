@@ -6,6 +6,7 @@ Author: Andreas Siebert, ask@touchableheroes.com
 
 ## Attention:
 [![Build Status](https://travis-ci.org/drdrej/app-buildr.png?branch=master)](https://travis-ci.org/drdrej/app-buildr)
+
 This software is unstable. please use it carefuly.
 
 ## Description:
