@@ -8,7 +8,7 @@ Author: Andreas Siebert, ask@touchableheroes.com
 
 ## Attention:
 This software is unstable. please use it carefuly.
-[![Build Status](https://travis-ci.org/[drdrej]/app-buildr.png)](https://travis-ci.org/drdrej/app-buildr)
+[![Build Status](https://travis-ci.org/drdrej/app-buildr.png?branch=master)](https://travis-ci.org/drdrej/app-buildr)
 
 ## Description:
 A code-generator to build apps. App-Buildr use templates and JavaScript 
