@@ -27,7 +27,8 @@
     "xml2js": "~0.2.6",
     "wrench": "~1.4.4",
     "underscore": "~1.4.4",
-    "js-schema": "~0.6.2"
+    "js-schema": "~0.6.2",
+    "eyes": "~0.1.8"
   },
   "devDependencies": {
     "mu2": "~0.5.17",
