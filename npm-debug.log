@@ -1,0 +1,330 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.2.10
+3 info using node@v0.8.19
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose read json C:\home\projects\android-mrtan\sources\sdk-apklib\app-buildr\script\package.json
+7 verbose cache add [ '.', null ]
+8 verbose cache add name=undefined spec="." args=[".",null]
+9 verbose parsed url { pathname: '.', path: '.', href: '.' }
+10 silly lockFile 3a52ce78- .
+11 verbose lock . C:\Users\asiebert\AppData\Roaming\npm-cache\3a52ce78-.lock
+12 verbose read json package.json
+13 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-9200\\1362584875078-0.23782069142907858\\tmp.tgz',
+13 verbose tar pack   '.' ]
+14 verbose tarball C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+15 verbose folder .
+16 info prepublish appbuildr@0.1.14
+17 silly lockFile 3a52ce78- .
+18 verbose lock . C:\Users\asiebert\AppData\Roaming\npm-cache\3a52ce78-.lock
+19 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+20 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\2c865b55-5078-0-23782069142907858-tmp-tgz.lock
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 3a52ce78- .
+23 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+24 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+25 verbose tar unpack C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+26 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+27 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package C:\Users\asiebert\AppData\Roaming\npm-cache\bf2c8f6e-5078-0-23782069142907858-package.lock
+28 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+29 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\2c865b55-5078-0-23782069142907858-tmp-tgz.lock
+30 silly gunzTarPerm modes [ '755', '644' ]
+31 silly gunzTarPerm extractEntry package.json
+32 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+33 silly gunzTarPerm extractEntry README.md
+34 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+35 silly gunzTarPerm extractEntry index.js
+36 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+37 silly gunzTarPerm extractEntry bin/appbuildr.js
+38 silly gunzTarPerm modified mode [ 'bin/appbuildr.js', 438, 420 ]
+39 silly gunzTarPerm extractEntry bin/appbuildr-install
+40 silly gunzTarPerm modified mode [ 'bin/appbuildr-install', 438, 420 ]
+41 silly gunzTarPerm extractEntry draft/app-model.json
+42 silly gunzTarPerm modified mode [ 'draft/app-model.json', 438, 420 ]
+43 silly gunzTarPerm extractEntry example/architecture/buildr/api-use-case.js
+44 silly gunzTarPerm modified mode [ 'example/architecture/buildr/api-use-case.js', 438, 420 ]
+45 silly gunzTarPerm extractEntry example/architecture/buildr/app-model.json
+46 silly gunzTarPerm modified mode [ 'example/architecture/buildr/app-model.json', 438, 420 ]
+47 silly gunzTarPerm extractEntry example/architecture/buildr/project.json
+48 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.json', 438, 420 ]
+49 silly gunzTarPerm extractEntry example/architecture/buildr/transformrs/create-helloworld-java.js
+50 silly gunzTarPerm modified mode [ 'example/architecture/buildr/transformrs/create-helloworld-java.js',
+50 silly gunzTarPerm   438,
+50 silly gunzTarPerm   420 ]
+51 silly gunzTarPerm extractEntry example/gen/project-root-ws/com/example/MyClass.java
+52 silly gunzTarPerm modified mode [ 'example/gen/project-root-ws/com/example/MyClass.java',
+52 silly gunzTarPerm   438,
+52 silly gunzTarPerm   420 ]
+53 silly gunzTarPerm extractEntry example/templates/HelloWorld.java.tmpl
+54 silly gunzTarPerm modified mode [ 'example/templates/HelloWorld.java.tmpl', 438, 420 ]
+55 silly gunzTarPerm extractEntry lib/appbuildr-install.js
+56 silly gunzTarPerm modified mode [ 'lib/appbuildr-install.js', 438, 420 ]
+57 silly gunzTarPerm extractEntry lib/Buildr.js
+58 silly gunzTarPerm modified mode [ 'lib/Buildr.js', 438, 420 ]
+59 silly gunzTarPerm extractEntry lib/BuildrAstNode.js
+60 silly gunzTarPerm modified mode [ 'lib/BuildrAstNode.js', 438, 420 ]
+61 silly gunzTarPerm extractEntry lib/BuildrResult.js
+62 silly gunzTarPerm modified mode [ 'lib/BuildrResult.js', 438, 420 ]
+63 silly gunzTarPerm extractEntry lib/Log.js
+64 silly gunzTarPerm modified mode [ 'lib/Log.js', 438, 420 ]
+65 silly gunzTarPerm extractEntry lib/PreProcessorImpl.js
+66 silly gunzTarPerm modified mode [ 'lib/PreProcessorImpl.js', 438, 420 ]
+67 silly gunzTarPerm extractEntry lib/MacrosApi.js
+68 silly gunzTarPerm modified mode [ 'lib/MacrosApi.js', 438, 420 ]
+69 silly gunzTarPerm extractEntry lib/MacroParser.js
+70 silly gunzTarPerm modified mode [ 'lib/MacroParser.js', 438, 420 ]
+71 silly gunzTarPerm extractEntry lib/MacroParserCursor.js
+72 silly gunzTarPerm modified mode [ 'lib/MacroParserCursor.js', 438, 420 ]
+73 silly gunzTarPerm extractEntry lib/utils-string.js
+74 silly gunzTarPerm modified mode [ 'lib/utils-string.js', 438, 420 ]
+75 silly gunzTarPerm extractEntry lib/MacroGeneratorStream.js
+76 silly gunzTarPerm modified mode [ 'lib/MacroGeneratorStream.js', 438, 420 ]
+77 silly gunzTarPerm extractEntry lib/MacroParser.pegjs
+78 silly gunzTarPerm modified mode [ 'lib/MacroParser.pegjs', 438, 420 ]
+79 silly gunzTarPerm extractEntry lib/bin/appbuildr.js
+80 silly gunzTarPerm modified mode [ 'lib/bin/appbuildr.js', 438, 420 ]
+81 silly gunzTarPerm extractEntry lib/macro/replace.js
+82 silly gunzTarPerm modified mode [ 'lib/macro/replace.js', 438, 420 ]
+83 silly gunzTarPerm extractEntry lib/macro/uncomment.js
+84 silly gunzTarPerm modified mode [ 'lib/macro/uncomment.js', 438, 420 ]
+85 silly gunzTarPerm extractEntry lib/macro/word.js
+86 silly gunzTarPerm modified mode [ 'lib/macro/word.js', 438, 420 ]
+87 silly gunzTarPerm extractEntry lib/transformrs/eclipse/create-eclipse-prj-files.js
+88 silly gunzTarPerm modified mode [ 'lib/transformrs/eclipse/create-eclipse-prj-files.js',
+88 silly gunzTarPerm   438,
+88 silly gunzTarPerm   420 ]
+89 silly gunzTarPerm extractEntry lib/transformrs/maven/create-maven-prj-files.js
+90 silly gunzTarPerm modified mode [ 'lib/transformrs/maven/create-maven-prj-files.js', 438, 420 ]
+91 silly gunzTarPerm extractEntry lib/transformrs/sdk/cleanup.js
+92 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/cleanup.js', 438, 420 ]
+93 silly gunzTarPerm extractEntry lib/transformrs/sdk/create-appbuildr-basics.js
+94 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/create-appbuildr-basics.js', 438, 420 ]
+95 silly gunzTarPerm extractEntry lib/transformrs/sdk/create-directory-structure.js
+96 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/create-directory-structure.js', 438, 420 ]
+97 silly gunzTarPerm extractEntry LICENSE.md
+98 silly gunzTarPerm modified mode [ 'LICENSE.md', 438, 420 ]
+99 silly gunzTarPerm extractEntry test/test-preprocessor.js
+100 silly gunzTarPerm modified mode [ 'test/test-preprocessor.js', 438, 420 ]
+101 silly gunzTarPerm extractEntry test/test-parser-cursor.js
+102 silly gunzTarPerm modified mode [ 'test/test-parser-cursor.js', 438, 420 ]
+103 silly gunzTarPerm extractEntry test/test-macros-api.js
+104 silly gunzTarPerm modified mode [ 'test/test-macros-api.js', 438, 420 ]
+105 silly gunzTarPerm extractEntry test/test-genertor-stream.js
+106 silly gunzTarPerm modified mode [ 'test/test-genertor-stream.js', 438, 420 ]
+107 silly gunzTarPerm extractEntry test/test-macro-parser.js
+108 silly gunzTarPerm modified mode [ 'test/test-macro-parser.js', 438, 420 ]
+109 silly gunzTarPerm extractEntry test/test-macro-word.js
+110 silly gunzTarPerm modified mode [ 'test/test-macro-word.js', 438, 420 ]
+111 silly gunzTarPerm extractEntry test/test-macro-uncomment.js
+112 silly gunzTarPerm modified mode [ 'test/test-macro-uncomment.js', 438, 420 ]
+113 silly gunzTarPerm extractEntry test/test-macro-replace.js
+114 silly gunzTarPerm modified mode [ 'test/test-macro-replace.js', 438, 420 ]
+115 silly gunzTarPerm extractEntry test/out-preprocess.test
+116 silly gunzTarPerm modified mode [ 'test/out-preprocess.test', 438, 420 ]
+117 silly gunzTarPerm extractEntry test/output2.test
+118 silly gunzTarPerm modified mode [ 'test/output2.test', 438, 420 ]
+119 silly gunzTarPerm extractEntry test/output.test
+120 silly gunzTarPerm modified mode [ 'test/output.test', 438, 420 ]
+121 silly gunzTarPerm extractEntry test/out-multiple-commands.test
+122 silly gunzTarPerm modified mode [ 'test/out-multiple-commands.test', 438, 420 ]
+123 verbose read json C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package\package.json
+124 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+125 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+126 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+127 silly lockFile 2c865b55-5078-0-23782069142907858-tmp-tgz C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\tmp.tgz
+128 verbose from cache C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package\package.json
+129 verbose tar pack [ 'C:\\Users\\asiebert\\AppData\\Roaming\\npm-cache\\appbuildr\\0.1.14\\package.tgz',
+129 verbose tar pack   'C:\\Users\\asiebert\\AppData\\Local\\Temp\\npm-9200\\1362584875078-0.23782069142907858\\package' ]
+130 verbose tarball C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+131 verbose folder C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+132 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+133 verbose lock C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package C:\Users\asiebert\AppData\Roaming\npm-cache\bf2c8f6e-5078-0-23782069142907858-package.lock
+134 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+135 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\75c7cd0f-che-appbuildr-0-1-14-package-tgz.lock
+136 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+137 silly lockFile bf2c8f6e-5078-0-23782069142907858-package C:\Users\asiebert\AppData\Local\Temp\npm-9200\1362584875078-0.23782069142907858\package
+138 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+139 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+140 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+141 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package C:\Users\asiebert\AppData\Roaming\npm-cache\b7d5cbbb-m-cache-appbuildr-0-1-14-package.lock
+142 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+143 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+144 verbose tar unpack C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+145 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+146 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package C:\Users\asiebert\AppData\Roaming\npm-cache\b7d5cbbb-m-cache-appbuildr-0-1-14-package.lock
+147 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+148 verbose lock C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz C:\Users\asiebert\AppData\Roaming\npm-cache\75c7cd0f-che-appbuildr-0-1-14-package-tgz.lock
+149 silly gunzTarPerm modes [ '755', '644' ]
+150 silly gunzTarPerm extractEntry package.json
+151 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+152 silly gunzTarPerm extractEntry README.md
+153 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+154 silly gunzTarPerm extractEntry index.js
+155 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+156 silly gunzTarPerm extractEntry bin/appbuildr.js
+157 silly gunzTarPerm modified mode [ 'bin/appbuildr.js', 438, 420 ]
+158 silly gunzTarPerm extractEntry bin/appbuildr-install
+159 silly gunzTarPerm modified mode [ 'bin/appbuildr-install', 438, 420 ]
+160 silly gunzTarPerm extractEntry draft/app-model.json
+161 silly gunzTarPerm modified mode [ 'draft/app-model.json', 438, 420 ]
+162 silly gunzTarPerm extractEntry example/architecture/buildr/api-use-case.js
+163 silly gunzTarPerm modified mode [ 'example/architecture/buildr/api-use-case.js', 438, 420 ]
+164 silly gunzTarPerm extractEntry example/architecture/buildr/app-model.json
+165 silly gunzTarPerm modified mode [ 'example/architecture/buildr/app-model.json', 438, 420 ]
+166 silly gunzTarPerm extractEntry example/architecture/buildr/project.json
+167 silly gunzTarPerm modified mode [ 'example/architecture/buildr/project.json', 438, 420 ]
+168 silly gunzTarPerm extractEntry example/architecture/buildr/transformrs/create-helloworld-java.js
+169 silly gunzTarPerm modified mode [ 'example/architecture/buildr/transformrs/create-helloworld-java.js',
+169 silly gunzTarPerm   438,
+169 silly gunzTarPerm   420 ]
+170 silly gunzTarPerm extractEntry example/gen/project-root-ws/com/example/MyClass.java
+171 silly gunzTarPerm modified mode [ 'example/gen/project-root-ws/com/example/MyClass.java',
+171 silly gunzTarPerm   438,
+171 silly gunzTarPerm   420 ]
+172 silly gunzTarPerm extractEntry example/templates/HelloWorld.java.tmpl
+173 silly gunzTarPerm modified mode [ 'example/templates/HelloWorld.java.tmpl', 438, 420 ]
+174 silly gunzTarPerm extractEntry lib/appbuildr-install.js
+175 silly gunzTarPerm modified mode [ 'lib/appbuildr-install.js', 438, 420 ]
+176 silly gunzTarPerm extractEntry lib/Buildr.js
+177 silly gunzTarPerm modified mode [ 'lib/Buildr.js', 438, 420 ]
+178 silly gunzTarPerm extractEntry lib/BuildrAstNode.js
+179 silly gunzTarPerm modified mode [ 'lib/BuildrAstNode.js', 438, 420 ]
+180 silly gunzTarPerm extractEntry lib/BuildrResult.js
+181 silly gunzTarPerm modified mode [ 'lib/BuildrResult.js', 438, 420 ]
+182 silly gunzTarPerm extractEntry lib/Log.js
+183 silly gunzTarPerm modified mode [ 'lib/Log.js', 438, 420 ]
+184 silly gunzTarPerm extractEntry lib/PreProcessorImpl.js
+185 silly gunzTarPerm modified mode [ 'lib/PreProcessorImpl.js', 438, 420 ]
+186 silly gunzTarPerm extractEntry lib/MacrosApi.js
+187 silly gunzTarPerm modified mode [ 'lib/MacrosApi.js', 438, 420 ]
+188 silly gunzTarPerm extractEntry lib/MacroParser.js
+189 silly gunzTarPerm modified mode [ 'lib/MacroParser.js', 438, 420 ]
+190 silly gunzTarPerm extractEntry lib/MacroParserCursor.js
+191 silly gunzTarPerm modified mode [ 'lib/MacroParserCursor.js', 438, 420 ]
+192 silly gunzTarPerm extractEntry lib/utils-string.js
+193 silly gunzTarPerm modified mode [ 'lib/utils-string.js', 438, 420 ]
+194 silly gunzTarPerm extractEntry lib/MacroGeneratorStream.js
+195 silly gunzTarPerm modified mode [ 'lib/MacroGeneratorStream.js', 438, 420 ]
+196 silly gunzTarPerm extractEntry lib/MacroParser.pegjs
+197 silly gunzTarPerm modified mode [ 'lib/MacroParser.pegjs', 438, 420 ]
+198 silly gunzTarPerm extractEntry lib/bin/appbuildr.js
+199 silly gunzTarPerm modified mode [ 'lib/bin/appbuildr.js', 438, 420 ]
+200 silly gunzTarPerm extractEntry lib/macro/replace.js
+201 silly gunzTarPerm modified mode [ 'lib/macro/replace.js', 438, 420 ]
+202 silly gunzTarPerm extractEntry lib/macro/uncomment.js
+203 silly gunzTarPerm modified mode [ 'lib/macro/uncomment.js', 438, 420 ]
+204 silly gunzTarPerm extractEntry lib/macro/word.js
+205 silly gunzTarPerm modified mode [ 'lib/macro/word.js', 438, 420 ]
+206 silly gunzTarPerm extractEntry lib/transformrs/eclipse/create-eclipse-prj-files.js
+207 silly gunzTarPerm modified mode [ 'lib/transformrs/eclipse/create-eclipse-prj-files.js',
+207 silly gunzTarPerm   438,
+207 silly gunzTarPerm   420 ]
+208 silly gunzTarPerm extractEntry lib/transformrs/maven/create-maven-prj-files.js
+209 silly gunzTarPerm modified mode [ 'lib/transformrs/maven/create-maven-prj-files.js', 438, 420 ]
+210 silly gunzTarPerm extractEntry lib/transformrs/sdk/cleanup.js
+211 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/cleanup.js', 438, 420 ]
+212 silly gunzTarPerm extractEntry lib/transformrs/sdk/create-appbuildr-basics.js
+213 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/create-appbuildr-basics.js', 438, 420 ]
+214 silly gunzTarPerm extractEntry lib/transformrs/sdk/create-directory-structure.js
+215 silly gunzTarPerm modified mode [ 'lib/transformrs/sdk/create-directory-structure.js', 438, 420 ]
+216 silly gunzTarPerm extractEntry LICENSE.md
+217 silly gunzTarPerm modified mode [ 'LICENSE.md', 438, 420 ]
+218 silly gunzTarPerm extractEntry test/test-preprocessor.js
+219 silly gunzTarPerm modified mode [ 'test/test-preprocessor.js', 438, 420 ]
+220 silly gunzTarPerm extractEntry test/test-parser-cursor.js
+221 silly gunzTarPerm modified mode [ 'test/test-parser-cursor.js', 438, 420 ]
+222 silly gunzTarPerm extractEntry test/test-macros-api.js
+223 silly gunzTarPerm modified mode [ 'test/test-macros-api.js', 438, 420 ]
+224 silly gunzTarPerm extractEntry test/test-genertor-stream.js
+225 silly gunzTarPerm modified mode [ 'test/test-genertor-stream.js', 438, 420 ]
+226 silly gunzTarPerm extractEntry test/test-macro-parser.js
+227 silly gunzTarPerm modified mode [ 'test/test-macro-parser.js', 438, 420 ]
+228 silly gunzTarPerm extractEntry test/test-macro-word.js
+229 silly gunzTarPerm modified mode [ 'test/test-macro-word.js', 438, 420 ]
+230 silly gunzTarPerm extractEntry test/test-macro-uncomment.js
+231 silly gunzTarPerm modified mode [ 'test/test-macro-uncomment.js', 438, 420 ]
+232 silly gunzTarPerm extractEntry test/test-macro-replace.js
+233 silly gunzTarPerm modified mode [ 'test/test-macro-replace.js', 438, 420 ]
+234 silly gunzTarPerm extractEntry test/out-preprocess.test
+235 silly gunzTarPerm modified mode [ 'test/out-preprocess.test', 438, 420 ]
+236 silly gunzTarPerm extractEntry test/output2.test
+237 silly gunzTarPerm modified mode [ 'test/output2.test', 438, 420 ]
+238 silly gunzTarPerm extractEntry test/output.test
+239 silly gunzTarPerm modified mode [ 'test/output.test', 438, 420 ]
+240 silly gunzTarPerm extractEntry test/out-multiple-commands.test
+241 silly gunzTarPerm modified mode [ 'test/out-multiple-commands.test', 438, 420 ]
+242 verbose read json C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package\package.json
+243 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+244 silly lockFile b7d5cbbb-m-cache-appbuildr-0-1-14-package C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package
+245 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+246 silly lockFile 75c7cd0f-che-appbuildr-0-1-14-package-tgz C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+247 silly shasum updated bytes 19749
+248 info shasum 42ae5cf3214755527a2c29637207ee87ab54c292
+248 info shasum C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+249 verbose from cache C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package\package.json
+250 verbose chmod C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz 644
+251 silly chown skipping for windows C:\Users\asiebert\AppData\Roaming\npm-cache\appbuildr\0.1.14\package.tgz
+252 silly lockFile 3a52ce78- .
+253 silly publish { name: 'appbuildr',
+253 silly publish   preferGlobal: true,
+253 silly publish   version: '0.1.14',
+253 silly publish   author: { name: 'drdrej' },
+253 silly publish   description: 'a simple code generation tool for developers',
+253 silly publish   repository: { type: 'git', url: 'https://github.com/drdrej/app-buildr.git' },
+253 silly publish   keywords: [ 'code', 'transform', 'generator', 'build', 'generate' ],
+253 silly publish   main: 'index.js',
+253 silly publish   bin: { appbuildr: './bin/appbuildr.js' },
+253 silly publish   dependencies:
+253 silly publish    { mu2: '~0.5.17',
+253 silly publish      pegjs: '~0.7.0',
+253 silly publish      imagemagick: '~0.1.3',
+253 silly publish      JSONSelect: '~0.4.0',
+253 silly publish      xml2js: '~0.2.6',
+253 silly publish      wrench: '~1.4.4',
+253 silly publish      underscore: '~1.4.4',
+253 silly publish      'js-schema': '~0.6.2',
+253 silly publish      eyes: '~0.1.8' },
+253 silly publish   devDependencies:
+253 silly publish    { mu2: '~0.5.17',
+253 silly publish      pegjs: '~0.7.0',
+253 silly publish      imagemagick: '~0.1.3',
+253 silly publish      JSONSelect: '~0.4.0',
+253 silly publish      xml2js: '~0.2.6',
+253 silly publish      wrench: '~1.4.4',
+253 silly publish      underscore: '~1.4.4' },
+253 silly publish   analyze: false,
+253 silly publish   license: 'MIT',
+253 silly publish   engines: { node: '>=0.8.19' },
+253 silly publish   readmeFilename: 'README.md',
+253 silly publish   directories: { example: 'example', test: 'test' },
+253 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+253 silly publish   readme: 'appbuildr\r\n==========\r\n-- inspired by model-driven-architecture.\r\n\r\nAuthor: Andreas Siebert, ask@touchableheroes.com\r\n\r\n## Attention:\r\n[![Build Status](https://travis-ci.org/drdrej/app-buildr.png?branch=master)](https://travis-ci.org/drdrej/app-buildr)\r\n\r\nThis software is unstable. please use it carefuly.\r\n\r\n## Description:\r\nA code-generator to build apps. App-Buildr use templates and JavaScript \r\nto build boiler-plate-code for your apps. the concept is based on the idea of\r\nmodel-driven-architecture and templating.\r\n\r\n## Usage\r\n\r\n1. install appbuildr\r\n2. create prototype-project\r\n3. create model\r\n4. create transformers\r\n5. enrich prototype-files with macros\r\n6. generate app-boilerplate-code\r\n\r\n### Where to use appbuildr?\r\n\r\nI use appbuildr to create basic-structure of my android-apps and plan to use it in other projects also.\r\n\r\n### Install\r\n\r\nappbuildr is a nodejs based product. to use it in your dev-environment you need to install nodejs and npm.\r\nafter nodejs is installed use npm to install appbuildr.\r\n\r\n    npm install appbuildr -g\r\n\r\n### Create prototype-project\r\nAppbuildr is a tool to copy and create files from templates based on a specified model.\r\nFist of all, before you start you will need a prototype-project. A prototype-project\r\nis a project with some predefined files for your main-project. \r\n\r\nFor example I use appbuildr to create boilerplate-code in my android-apps. To use it, i\'ve created \r\nan android-prototype-project. In this eclipse-project I do all my "research-stuff" for the main-project. \r\nSo, I config my settings, create some java-files and some xmls. And use all this stuff \r\nlater in appbuildr to derive my final application from prototype.\r\n\r\n\r\n### Create model\r\n\r\nModel is a simple json-file. The structure of the model is based on prefered transformers. \r\nA model-file is your way to describe a solution. Here is an example of a model-file:\r\n\r\n```javascript\r\n    {\r\n    "modelVersion" : 1,\r\n    \r\n    "app" : {\r\n     ...\r\n     \r\n     "entities" : [\r\n         { \r\n            "name"  : "MyEntity_1",\r\n            "columns" : [ ... ] \r\n         \r\n         },\r\n         { \r\n            "name"  : "MyEntity_2",\r\n            "columns" : [ ... ]\r\n         \r\n         },\r\n         ...\r\n     ]\r\n    }\r\n    }\r\n```\r\n\r\nModels will be validated and transformed into code by transformers. \r\n\r\n\r\n### Create transformrs\r\n\r\nTransformr is a java-script-object declared in this way:\r\n```javascript\r\nmodule.exports = {\r\n    \r\n    // model-version. is important to validate later against the buildr and transformrs\r\n    modelVersion : 1,\r\n    \r\n    // model-query:\r\n    query : ".entities > *",\r\n    \r\n    // description, will be used to log:\r\n\tdesc : "Create entities",\r\n\r\n    // transformation.function:\r\n\tbind : function(entity, model) {\t\r\n       ...\r\n\t}\r\n};\r\n\r\n```\r\n\r\n\r\nExample of a transformr to create entity-classes:\r\n\r\n```javascript\r\nmodule.exports = {\r\n    modelVersion : 1,\r\n\r\n\tquery : ".entities > *",\r\n    \r\n\tdesc : "Create entities",\r\n\r\n\tbind : function(entity, model) {\t\r\n\t\tvar fileModel = model.vfs;\r\n\t\t\r\n        // create dir-structure:\r\n\t\tvar dir = fileModel.dirs( pckgPath );\r\n\t\tvar fileName = entity.name + ".java";\r\n\t\t\r\n        // path to template-dir:\r\n\t\tvar path = model.appDefinition.projectTemplate + "/templates";\r\n\t\t\r\n        // append template-based file:\r\n\t\tdir.add("tmpl", fileName, "create java from template.",\r\n\t\t\t\ttrue, \r\n                {\r\n\t\t\t\t\ttemplatePath : path,\r\n\t\t\t\t\ttemplate : "PrototypeEntity.java.tmpl",\r\n\r\n\t\t\t\t\tclassName : entity.name,\r\n                    pckg      : "com.example.entities"\r\n\t\t});\r\n\t}\r\n};\r\n\r\n```\r\n\r\nTransformers must be placed in a transformr-dir. Check example-code!\r\n\r\n\r\n\r\n#### How to use templates in appbuildr?\r\n\r\nTeplates are files enriched with [mustache-syntax] (http://mustache.github.com/) \r\nand use a suffix *.tmpl.\r\n\r\n\r\n##### Create a class from template\r\n\r\nFor example in my apps I create database-entities for my android-apps based on a\r\ntemplate Entity.java.tmpl.\r\n\r\nA template might look like this:\r\n\r\n\r\n    package {{params.pckg}};\r\n    \r\n    public class {{params.entity}} extends Entity {\r\n    ...\r\n    }\r\n\r\n\r\nI don\'t like template-files, because I can\'t use my favorised IDE to write them. For good-working syntax-highliting \r\nyou have to use an editor with support for both languages: template- and source-language. \r\n\r\nMy common way of building solutions is:\r\n\r\n1. build a prototype\r\n2. build template from prototype\r\n3. build product from template\r\n\r\nI\'ve tried to rebuild this workflow in appbuildr. \r\n\r\nAppbuild supports some text-editing-macros to gives you a way to create \r\ntemplates directly from prototypes. An implemented pre-processor convert\r\nprototype-files in a template. To modify the prototype-file appbuildr use \r\nmacros (described later).\r\n\r\nAn example of a prototype-file written in Java Programming Language filled with macros:  \r\n\r\n```java\r\npackage /* [#word with:{{params.pckg}} #]*/ com.example.prototype;\r\n\r\npublic class /* [#word with:{{params.className}} #] */ PrototypeEntity extends Entity {\r\n...\r\n}\r\n```\r\n\r\nIn this example I\'ve used a word-macro to replace the next word in text \r\nwith a passed mustache-variable.\r\n\r\n\r\n##### Preprocessor-Macros\r\nUse built-in macros to simplify template-creation.\r\n\r\nPredefined macros:\r\n\r\n1. word - replace next word with a passed string or mustache-variable.\r\n2. uncomment - uncomment the next commented line. \r\nWARNING: supports only java-single-comment \'//\' at this moment\r\n\r\n\r\n### API/JavaScript\r\n\r\nYou can use appbuildr programmaticaly:\r\n\r\n```javascript\r\n\r\n// load appbuildr:\r\nvar Buildr = require( "apbuildr" ); \r\n\r\n// init appbuildr\r\nvar buildr = new Buildr("path/to/my/output/dir", \r\n\t\t"path/to/my/prototype" );\r\n\r\n// to delete the complete project use: \r\n// buildr.deleteProject();\r\n\r\n// clean up only some dirs and files \r\n// to rebuild the most important stuff:\r\nbuildr.cleanup();\r\n\r\n// -- call transformation "create-db-entities"\r\nbuildr.use( "create-db-entities" );\r\n\r\n// generate the project:\r\nbuildr.generate();\r\n\r\nbuildr.close();\r\n```\r\n\r\n### Libraries and third-party-products\r\n\r\nTo create this project I have used different open-source-projects:\r\n\r\n1. [JSONSelect] (http://jsonselect.org/#overview) - to select elements in the model.\r\n2. [mu2] (https://github.com/raycmorgan/Mu) - to interpret mustache-syntax in my templates.\r\n3. [wrench] (https://github.com/ryanmcgrath/wrench-js) - to work with directories.\r\n4. [mocha] (http://visionmedia.github.com/mocha/) - to test\r\n5. [pegjs] (http://pegjs.majda.cz/) - to implement the preprocessor-macro-parser.\r\n\r\n\r\n##Links: \r\n\r\n\r\n\r\n\r\n\r\n##License: \r\nMIT License (MIT).\r\nFor more information please check LICENSE.md file.\r\n',
+253 silly publish   _id: 'appbuildr@0.1.14',
+253 silly publish   dist: { shasum: '42ae5cf3214755527a2c29637207ee87ab54c292' },
+253 silly publish   _from: '.' }
+254 verbose url raw appbuildr
+255 verbose url resolving [ 'https://registry.npmjs.org/', './appbuildr' ]
+256 verbose url resolved https://registry.npmjs.org/appbuildr
+257 info trying registry request attempt 1 at 16:48:08
+258 http PUT https://registry.npmjs.org/appbuildr
+259 http 409 https://registry.npmjs.org/appbuildr
+260 verbose url raw appbuildr
+261 verbose url resolving [ 'https://registry.npmjs.org/', './appbuildr' ]
+262 verbose url resolved https://registry.npmjs.org/appbuildr
+263 info trying registry request attempt 1 at 16:48:10
+264 http GET https://registry.npmjs.org/appbuildr
+265 http 200 https://registry.npmjs.org/appbuildr
+266 error publish fail Cannot publish over existing version.
+266 error publish fail Bump the 'version' field, set the --force flag, or
+266 error publish fail     npm unpublish 'appbuildr@0.1.14'
+266 error publish fail and try again
+267 error System Windows_NT 6.1.7601
+268 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+269 error cwd C:\home\projects\android-mrtan\sources\sdk-apklib\app-buildr\script
+270 error node -v v0.8.19
+271 error npm -v 1.2.10
+272 error code EPUBLISHCONFLICT
+273 verbose exit [ 1, true ]
