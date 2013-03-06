@@ -1,7 +1,7 @@
 {
   "name": "appbuildr",
   "preferGlobal": true,
-  "version": "0.1.15",
+  "version": "0.1.16",
   "author": "drdrej",
   "description": "a simple code generation tool for developers",
   "repository": {
@@ -17,8 +17,10 @@
   ],
   "main": "index.js",
   "bin": {
-    "appbuildr": "./bin/appbuildr.js"
+    "appbuildr" : "./bin/appbuildr",
+    "appbuildr-install : "./bin/appbuildr-install"
   },
+  
   "dependencies": {
     "mu2": "~0.5.17",
     "pegjs": "~0.7.0",
