@@ -1,3 +1,2 @@
 #!/usr/bin/env node
-
 var Appbuildr = require( "../lib/bin/appbuildr.js" );

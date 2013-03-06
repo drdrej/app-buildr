@@ -1,5 +1,4 @@
 #!/usr/bin/env node
 
-console.log( "start appbuildr-install" );
 
-var AppbuildrInstall = require( "../lib/appbuildr-install.js" );
+var AppbuildrInstall = require( "../lib/bin/appbuildr-install.js" );
