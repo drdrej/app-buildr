@@ -1,4 +1,4 @@
-appbuildr
+appbuildr [closed|experimental]
 ==========
 -- inspired by model-driven-architecture.
 
