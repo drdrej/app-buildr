@@ -2,8 +2,8 @@ appbuildr [closed|experimental]
 ==========
 -- inspired by model-driven-architecture.
 
-     state: experimental/closed
-     Author: Andreas Siebert, ask@touchableheroes.com
+    state: experimental/closed
+    Author: Andreas Siebert, ask@touchableheroes.com
 
 ## Attention:
 [![Build Status](https://travis-ci.org/drdrej/app-buildr.png?branch=master)](https://travis-ci.org/drdrej/app-buildr)
