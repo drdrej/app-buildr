@@ -1,7 +1,7 @@
 appbuildr [closed|experimental]
 ==========
 
-THIS PROJECT IS DISCONTINUED.
+**THIS PROJECT IS DISCONTINUED.**
 
 -- inspired by model-driven-architecture.
 
